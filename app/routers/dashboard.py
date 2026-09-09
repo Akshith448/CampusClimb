@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 from starlette.responses import HTMLResponse
 
 from app.database import get_db
-from app.models import SyllabusTopi, Note, NoteChunk, PYQ, TopicImportance
+from app.models import SyllabusTopic, Note, NoteChunk, PYQ, TopicImportance
 
 router = APIRouter()
 

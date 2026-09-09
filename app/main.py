@@ -1,21 +1,25 @@
-""" work
+"""
 FastAPI Application Entry Point.
 
-Mounts Jinja2 templates, static files, and includes all route modules.
-Creates database tables on startup.
-""" 
- 
+Configures CORS, database table creation on startup, and registers
+REST API v1 routers for Auth, Uploads, Dashboard, and Bilingual Agent.
+Mounts legacy static/template directories for backward compatibility.
+"""
+
 import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from starlette.middleware.sessions import SessionMiddleware
+from dotenv import load_dotenv
 
 from app.database import engine, Base
-from app.models import SyllabusTopic, Note, NoteChunk, PYQ, TopicImportance  # noqa: F401 — ensure models are registered
-from app.routers import upload, dashboard
+from app.models import SyllabusTopic, Note, NoteChunk, PYQ, TopicImportance  # noqa: F401
+from app.routers import auth, dashboard, upload, agent
+
+load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -24,25 +28,36 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 async def lifespan(app: FastAPI):
     """Create all database tables on application startup."""
     Base.metadata.create_all(bind=engine)
-    # Create uploads directory if it doesn't exist
     os.makedirs(os.path.join(BASE_DIR, "..", "uploads"), exist_ok=True)
     yield
 
 
 app = FastAPI(
-    title="CampusClimb — NLP Notes System",
-    description="Syllabus-aligned organization and semantic deduplication of student notes",
+    title="CampusClimb — NLP Notes System REST API",
+    description="Versioned REST API for syllabus-aligned notes deduplication & bilingual Q&A",
     version="1.0.0",
     lifespan=lifespan,
 )
 
-# Mount static files and templates
+# CORS Configuration — restrict allowed origins explicitly
+cors_env = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000")
+allowed_origins = [origin.strip() for origin in cors_env.split(",") if origin.strip()]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=allowed_origins,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type", "Accept", "X-Requested-With"],
+)
+
+# Mount legacy static files and templates (untouched for transition)
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
-
-# Share templates instance with routers
 app.state.templates = templates
 
-# Include routers
+# Register REST API v1 Routers
+app.include_router(auth.router)
 app.include_router(upload.router)
 app.include_router(dashboard.router)
+app.include_router(agent.router)
