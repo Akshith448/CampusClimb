@@ -20,7 +20,7 @@ from app.models import SyllabusTopic, NoteChunk
 from app.rate_limiter import ai_rate_limiter
 from app.schemas import AgentQueryRequest, AgentQueryResponse, SourceChunkSchema
 from core.embeddings import get_embedding
-from core.topic_mapper import map_chunks_batch_top2
+from core.topic_mapper import map_chunks_batch
 
 load_dotenv()
 
@@ -115,20 +115,24 @@ async def agent_query(
     topic_embeddings = [(t.id, json.loads(t.embedding)) for t in topics if t.embedding]
     topic_name_map = {t.id: t.topic_name for t in topics}
 
-    mapping_results = map_chunks_batch_top2(
+    mapping_results_raw = map_chunks_batch(
         [query_emb],
         topic_embeddings,
-        chunk_texts=[body.query],
-        topic_names=topic_name_map,
     )
 
-    if not mapping_results:
+    if not mapping_results_raw:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to map query to topic space.",
         )
 
-    top_mapping = mapping_results[0]
+    # Adapt tuple (topic_id, score) into expected dict schema
+    raw_top = mapping_results_raw[0]
+    top_mapping = {
+        "top1_topic_id": raw_top[0],
+        "top1_score": raw_top[1],
+        "confidence": "High" if raw_top[1] > 0.7 else ("Medium" if raw_top[1] > 0.5 else "Low"),
+    }
     matched_topic_id = top_mapping["top1_topic_id"]
     matched_topic_name = topic_name_map.get(matched_topic_id, "General Concept")
 
