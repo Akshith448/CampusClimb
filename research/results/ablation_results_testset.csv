@@ -1,0 +1,5 @@
+Pipeline,Top1 Accuracy,Top3 Accuracy,Precision,Recall,F1,n_evaluated
+Embeddings Only,0.5371,0.6812,0.4429,0.4469,0.416,229
+Embeddings + Threshold,0.4978,0.6157,0.4392,0.4264,0.4048,229
+Embeddings + Threshold + Keyword Boost,0.5546,0.6681,0.535,0.5165,0.4926,229
+Full Pipeline (CAPT-M),0.5109,0.6114,0.5178,0.4777,0.4667,229

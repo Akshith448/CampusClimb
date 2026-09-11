@@ -1,0 +1,26 @@
+=================================================================================================================================================
+CONSOLIDATED NLP PIPELINE EVALUATION RESULTS (HELD-OUT TEST SET)
+Gold set size (test): 229 (OS=95, CN=62, DBMS=72)
+=================================================================================================================================================
+Method                         | OS Top-1  | OS Top-3  | CN Top-1  | CN Top-3  | DBMS Top-1 | DBMS Top-3 | Pool Top-1 | Pool Top-3 | Dedup F1 (Held-out) 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Hybrid ST+TF-IDF (α=0.6)       | 0.4947    | 0.6421    | 0.7097    | 0.8710    | 0.5417     | 0.6944     | 0.5677     | 0.7205     | 0.7013 (0.5965*)†‡  
+Sentence-Transformer           | 0.4211    | 0.6526    | 0.7097    | 0.8710    | 0.4861     | 0.6667     | 0.5197     | 0.7162     | 0.7013 (0.5965*)†‡  
+TF-IDF Baseline                | 0.4105    | 0.5263    | 0.6129    | 0.8871    | 0.5278     | 0.5833     | 0.5022     | 0.6419     | —                   
+LDA Baseline                   | 0.2316    | 0.2842    | 0.2258    | 0.2903    | 0.2083     | 0.2917     | 0.2227     | 0.2882     | —                   
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Gold test set: OS=95, CN=62, DBMS=72, Total=229
+McNemar's Test for Hybrid vs Others (Top-1):
+  Hybrid vs ST original: chi2=4.8400, p=0.0278 (b=18, c=7)
+  Hybrid vs TF-IDF:     chi2=7.2581, p=7.0583e-03 (b=23, c=8)
+  Hybrid vs LDA:        chi2=57.2569, p=3.8245e-14 (b=94, c=15)
+McNemar's Test for Hybrid vs Others (Top-3):
+  Hybrid vs ST original: chi2=0.1429, p=0.7055 (b=4, c=3)
+  Hybrid vs TF-IDF:     chi2=13.5000, p=0.0002 (b=21, c=3)
+  Hybrid vs LDA:        chi2=77.1732, p=1.5660e-18 (b=113, c=14)
+† Dedup F1: reported as Full-set F1 (Hard-case F1 in parentheses) on held-out eval split at tuned threshold of 0.75.
+  Full-set 95% Wilson CI: [0.5763, 0.8021] (n=60 pairs; TP=27, FP=23, FN=0, TN=10)
+  Hard-case 95% Wilson CI: [0.4426, 0.7335] (n=40 pairs; TP=17, FP=23, FN=0, TN=0)
+‡ Dedup F1 is identical for ST and Hybrid because deduplication uses the embedding similarity clustering pipeline
+  independently of the topic-mapping method; it is a pipeline-level metric, not a per-method metric.
+=================================================================================================================================================

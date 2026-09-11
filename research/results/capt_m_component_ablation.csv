@@ -1,0 +1,6 @@
+Stage,Top1 Accuracy,Top1 Delta,Top3 Accuracy,Top3 Delta,Precision,Recall,F1,n_evaluated
+1. FT SBERT NN only,0.6288,—,0.7773,—,0.5164,0.5262,0.4941,229
+2. + complete-linkage clustering,0.5677,-0.0611,0.7729,-0.0044,0.4533,0.4669,0.4324,229
+3. + keyword mixed-topic detection,0.524,-0.0437,0.7031,-0.0698,0.4968,0.501,0.4647,229
+4. + confidence/adaptive threshold,0.524,+0.0000,0.7118,+0.0087,0.4976,0.501,0.4658,229
+5. + TF-IDF hybrid stacking,0.4672,-0.0568,0.5983,-0.1135,0.4721,0.4309,0.4198,229

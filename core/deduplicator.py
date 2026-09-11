@@ -109,10 +109,14 @@ def deduplicate_chunks(
         root = uf.find(chunk["id"])
         clusters[root].append(chunk)
 
-    # Assign cluster_id and pick representative (longest chunk)
+    # Assign cluster_id and pick representative.
+    # Prefer information density (meaningful word count, set by upload._information_density)
+    # over raw character length, so noise-heavy chunks do not beat clean educational ones.
     for cluster_id_counter, (root, members) in enumerate(clusters.items()):
-        # Sort by text length descending — longest chunk is representative
-        members.sort(key=lambda c: len(c["chunk_text"]), reverse=True)
+        members.sort(
+            key=lambda c: c.get("_density", len(c["chunk_text"])),
+            reverse=True,
+        )
         for i, member in enumerate(members):
             member["cluster_id"] = cluster_id_counter
             member["is_representative"] = (i == 0)

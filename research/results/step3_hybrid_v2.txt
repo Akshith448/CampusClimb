@@ -1,0 +1,52 @@
+============================================================================
+STEP 3 (v2) — HYBRID + ABSTAIN ABLATION  |  Proper Dev/Test Split
+  Gold n=326  →  Dev n=97 (30%)  |  Test n=229 (70%)
+  Stratified by subject. Alpha/config selected on dev ONLY.
+============================================================================
+
+(A) DEV-SET SWEEP (config selection only — NOT the paper headline)
+  n=97 samples  |  ST baseline: Top-1=0.5979  Top-3=0.7835
+
+  Configuration                |   Top-1 |   Top-3 |   ΔTop-1 |   ΔTop-3
+  --------------------------------------------------------------------
+  ST original (CAPT-M)         |  0.5979 |  0.7835 |  +0.0000 |  +0.0000  ← baseline
+  ST no-abstain (thr=0.00)     |  0.6392 |  0.7835 |  +0.0412 |  +0.0000
+  ST relax-thr=0.30            |  0.6392 |  0.7835 |  +0.0412 |  +0.0000
+  ST relax-thr=0.35            |  0.6289 |  0.7835 |  +0.0309 |  +0.0000
+  Hybrid α=0.3                 |  0.6392 |  0.7835 |  +0.0412 |  +0.0000
+  Hybrid α=0.4                 |  0.6392 |  0.7732 |  +0.0412 |  -0.0103
+  Hybrid α=0.5                 |  0.6598 |  0.7835 |  +0.0619 |  +0.0000
+  Hybrid α=0.6                 |  0.6598 |  0.7835 |  +0.0619 |  +0.0000  ← SELECTED
+  Hybrid α=0.7                 |  0.6392 |  0.7732 |  +0.0412 |  -0.0103
+  Hybrid α=0.8                 |  0.6495 |  0.7629 |  +0.0515 |  -0.0206
+  Hybrid α=0.9                 |  0.6289 |  0.7629 |  +0.0309 |  -0.0206
+  --------------------------------------------------------------------
+
+  Selected config: Hybrid α=0.6  (highest Top-1 on dev)
+  Ties broken by: highest alpha / threshold (most conservative)
+
+============================================================================
+(B) HELD-OUT TEST SET RESULTS  ← PAPER HEADLINE
+  n=229 samples  |  Config selected BEFORE looking at test data.
+============================================================================
+
+  Configuration                |   Top-1 |       95% CI Top-1 |   Top-3 |       95% CI Top-3
+  --------------------------------------------------------------------------------------
+  ST original (CAPT-M)         |  0.5197 | [0.4552,0.5835]   |  0.7162 | (baseline)
+  Hybrid α=0.6                 |  0.5677 | [0.5029,0.6302]   |  0.7205 | [0.6591,0.7746]
+  --------------------------------------------------------------------------------------
+
+  Δ Top-1: +0.0480    Δ Top-3: +0.0044
+
+  MCNEMAR'S TEST on held-out test set (229 samples):
+  [Hybrid α=0.6] vs [ST original]
+  Top-1: χ²=4.840  p=0.0278  b=18 c=7  *** SIGNIFICANT (p<0.05)
+  Top-3: χ²=0.143  p=0.7055  b=4 c=3  NOT significant
+
+  INTERPRETATION:
+  The improvement in Top-1 accuracy (+0.0480) is statistically
+  significant on the held-out test set (p=0.0278), confirming the
+  dev-set selection was not an artifact of overfitting to dev.
+
+  PAPER NOTE: Full-sweep numbers on all 326 samples must NOT be used
+  as headline result — they are optimistic (config was selected on same data).

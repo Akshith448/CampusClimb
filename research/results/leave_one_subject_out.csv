@@ -1,0 +1,5 @@
+Target Subject,Training Subjects,Top1 Accuracy,Top1 CI Low,Top1 CI High,Top3 Accuracy,Top3 CI Low,Top3 CI High,n_test,training_time_seconds
+Operating Systems,Computer Networks + DBMS,0.4105,0.317,0.511,0.4632,0.3663,0.5629,95,101.63
+Computer Networks,Operating Systems + DBMS,0.5806,0.4567,0.6952,0.7419,0.6212,0.8345,62,159.26
+DBMS,Operating Systems + Computer Networks,0.5139,0.4007,0.6257,0.6111,0.4956,0.7153,72,131.71
+Aggregate Mean,—,0.5017,,,0.6054,,,229,

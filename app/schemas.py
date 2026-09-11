@@ -6,18 +6,43 @@ file uploads, and the bilingual agent endpoint.
 """
 
 from typing import Any, Dict, List, Optional
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
+
+# Standard regex for email validation without third-party email_validator package
+EMAIL_REGEX = r"^[\w\.\+\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)+$"
 
 
 # --- Auth Schemas ---
 class SignUpRequest(BaseModel):
-    email: str = Field(..., example="student@campus.edu")
-    password: str = Field(..., min_length=6, example="SecurePassword123!")
+    email: str = Field(
+        ...,
+        pattern=EMAIL_REGEX,
+        description="User email address",
+        json_schema_extra={"example": "student@campus.edu"},
+    )
+    password: str = Field(
+        ...,
+        min_length=8,
+        max_length=128,
+        description="User password (minimum 8 characters)",
+        json_schema_extra={"example": "SecurePassword123!"},
+    )
 
 
 class LoginRequest(BaseModel):
-    email: str = Field(..., example="student@campus.edu")
-    password: str = Field(..., example="SecurePassword123!")
+    email: str = Field(
+        ...,
+        pattern=EMAIL_REGEX,
+        description="User email address",
+        json_schema_extra={"example": "student@campus.edu"},
+    )
+    password: str = Field(
+        ...,
+        min_length=1,
+        max_length=128,
+        description="User password",
+        json_schema_extra={"example": "SecurePassword123!"},
+    )
 
 
 class UserResponse(BaseModel):
@@ -28,6 +53,8 @@ class UserResponse(BaseModel):
 class AuthTokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
+    refresh_token: Optional[str] = None
+    expires_in: Optional[int] = None
     user: UserResponse
 
 
@@ -122,10 +149,58 @@ class UploadResponse(BaseModel):
 
 
 # --- Bilingual Agent Schemas ---
+class CitationItem(BaseModel):
+    citation_id: int
+    source_id: int
+    source_name: str
+    chunk_id: int
+    page_number: Optional[int] = None
+    snippet: str
+    similarity_score: Optional[float] = None
+
+
+class SourceItemSchema(BaseModel):
+    id: int
+    filename: str
+    student_name: Optional[str] = None
+    upload_date: Optional[str] = None
+    chunk_count: int = 0
+
+
+class SourceListResponse(BaseModel):
+    subject: str
+    sources: List[SourceItemSchema]
+
+
 class AgentQueryRequest(BaseModel):
-    query: str = Field(..., min_length=3, example="Explain paging and page table structure")
-    subject: str = Field(..., example="Operating Systems")
-    language: str = Field("English", example="Hindi")
+    query: str = Field(
+        ...,
+        min_length=1,
+        max_length=4000,
+        description="Query or question from the student",
+        json_schema_extra={"example": "Explain paging and page table structure"},
+    )
+    subject: str = Field(
+        "Operating Systems",
+        min_length=1,
+        max_length=100,
+        description="Subject name",
+        json_schema_extra={"example": "Operating Systems"},
+    )
+    language: Optional[str] = Field(
+        "auto",
+        max_length=50,
+        description="Target response language",
+        json_schema_extra={"example": "auto"},
+    )
+    selected_source_ids: Optional[List[int]] = Field(
+        None,
+        description="Specific source Note IDs to restrict retrieval to. If omitted, all user sources for the subject are used.",
+    )
+    chat_history: Optional[List[Dict[str, str]]] = Field(
+        None,
+        description="Optional recent conversation turns for context continuity.",
+    )
 
 
 class SourceChunkSchema(BaseModel):
@@ -143,4 +218,13 @@ class AgentQueryResponse(BaseModel):
     confidence_label: str
     answer: str
     explanation: str
-    sources: List[SourceChunkSchema]
+    sources: List[SourceChunkSchema] = Field(default_factory=list)
+    selected_source_ids: Optional[List[int]] = None
+    source_type: str = "notes"  # "notes" | "general_knowledge"
+    notes_match: bool = True
+    fallback_used: bool = False
+    notice: Optional[str] = None
+    citations: List[CitationItem] = Field(default_factory=list)
+    diagram_mermaid: Optional[str] = None
+    related_questions: List[str] = Field(default_factory=list)
+

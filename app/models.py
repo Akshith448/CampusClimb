@@ -16,11 +16,23 @@ from sqlalchemy.orm import relationship
 from app.database import Base
 
 
+class Subject(Base):
+    """A subject offering in CampusClimb."""
+    __tablename__ = "subjects"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(100), unique=True, nullable=False, index=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    notes = relationship("Note", back_populates="subject_ref")
+
+
 class SyllabusTopic(Base):
-    """A single topic extracted from the syllabus, belonging to a unit."""
+    """A single topic extracted from the syllabus, belonging to a unit and subject."""
     __tablename__ = "syllabus_topics"
 
     id = Column(Integer, primary_key=True, index=True)
+    subject = Column(String(100), nullable=False, default="Operating Systems", index=True)
     unit_number = Column(Integer, nullable=False)
     unit_name = Column(String(255), nullable=False)
     topic_name = Column(String(255), nullable=False)
@@ -36,11 +48,14 @@ class Note(Base):
     __tablename__ = "notes"
 
     id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(String(255), nullable=True, index=True)
     student_name = Column(String(100), nullable=False)
     subject = Column(String(100), nullable=False, default="Operating Systems")
+    subject_id = Column(Integer, ForeignKey("subjects.id"), nullable=True, index=True)
     original_filename = Column(String(255), nullable=False)
     upload_date = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
+    subject_ref = relationship("Subject", back_populates="notes")
     chunks = relationship("NoteChunk", back_populates="note")
 
 
@@ -56,6 +71,8 @@ class NoteChunk(Base):
     similarity_score = Column(Float, nullable=True)
     cluster_id = Column(Integer, nullable=True)
     is_representative = Column(Boolean, default=False)
+    cleaned_text = Column(Text, nullable=True)
+    diagram_mermaid = Column(Text, nullable=True)
 
     note = relationship("Note", back_populates="chunks")
     topic = relationship("SyllabusTopic", back_populates="chunks")

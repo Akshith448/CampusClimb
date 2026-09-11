@@ -1,0 +1,37 @@
+
+HEADLINE NUMBER (clean held-out eval, n=60):
+  Threshold 0.75:  P=0.5400  R=1.0000  F1=0.7013
+                   95% Wilson CI: [0.5763, 0.8021]
+
+COMPARISON (recall-maximizing tied threshold 0.70):
+  Threshold 0.70:  P=0.5400  R=1.0000  F1=0.7013
+                   95% Wilson CI: [0.5763, 0.8021]
+
+ORIGINAL BASELINE (fixed 0.85):
+  Threshold 0.85:  P=0.9286  R=0.4815
+                   F1=0.6341  CI: [0.5076, 0.7445]
+
+DESIGN CHOICE STATEMENT (for paper):
+  "We selected the deduplication threshold via a held-out dev/eval split
+   (dev n=30, eval n=60), sweeping thresholds from 0.70 to 0.90.
+   Three thresholds (0.70, 0.72, 0.75) achieved identical F1=0.7317 on dev;
+   we conservatively selected 0.75 — the highest among the tied values —
+   to limit false positives.
+
+   At threshold 0.75 on the held-out eval set, the system achieves
+   Precision=0.54, Recall=1.00, F1=0.7013
+   (95% CI [0.5763, 0.8021]).
+   The tuned threshold markedly improves recall over the original fixed
+   threshold of 0.85 (Recall 1.00 vs 0.48),
+   at the cost of increased false positives (23 FP out of 33 true negatives,
+   70% FPR). This trade-off is appropriate for a
+   deduplication system where missing true duplicates causes persistent content
+   redundancy, whereas false positives can be reviewed manually."
+
+NOTE: Full 90-pair set numbers (INCLUDES TUNING DATA — OPTIMISTIC):
+  Threshold 0.75 on all 90 pairs:
+
+NUMERIC RESULTS:
+t=0.75 (selected): P=0.5400 R=1.0000 F1=0.7013 CI=[0.5763,0.8021] TP=27 FP=23 FN=0 TN=10
+t=0.70 (recall-max): P=0.5400 R=1.0000 F1=0.7013 CI=[0.5763,0.8021] TP=27 FP=23 FN=0 TN=10
+t=0.85 (original): P=0.9286 R=0.4815 F1=0.6341 CI=[0.5076,0.7445] TP=13 FP=1 FN=14 TN=32

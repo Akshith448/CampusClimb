@@ -4,6 +4,8 @@ import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Query from './pages/Query';
+import Upload from './pages/Upload';
+import Dashboard from './pages/Dashboard';
 import AuthCallback from './pages/AuthCallback';
 
 export default function App() {
@@ -30,7 +32,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/query" element={<Query />} />
+          <Route path="/upload" element={<Upload />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

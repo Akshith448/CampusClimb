@@ -1,0 +1,194 @@
+subject,unit_number,unit_name,topic_id,topic_name,question_count,frequency_score,recency_score,final_score,label
+Operating Systems,1,Introduction to Operating Systems,142,Operating System Introduction,20,0.0995,0.0889,0.0963,High
+Operating Systems,1,Introduction to Operating Systems,143,Simple Batch Systems,6,0.0299,0.0331,0.0308,Medium
+Operating Systems,1,Introduction to Operating Systems,144,Multi-programmed Systems,1,0.005,0.0052,0.005,Low
+Operating Systems,1,Introduction to Operating Systems,145,Time-shared Systems,6,0.0299,0.0372,0.0321,Medium
+Operating Systems,1,Introduction to Operating Systems,146,Personal Computer Systems,3,0.0149,0.0165,0.0154,Low
+Operating Systems,1,Introduction to Operating Systems,147,Parallel Systems,13,0.0647,0.062,0.0639,High
+Operating Systems,1,Introduction to Operating Systems,148,Distributed Systems,3,0.0149,0.0145,0.0148,Low
+Operating Systems,1,Introduction to Operating Systems,149,Real-Time Systems,4,0.0199,0.0207,0.0201,Medium
+Operating Systems,1,Introduction to Operating Systems,150,System Components,12,0.0597,0.0662,0.0616,High
+Operating Systems,1,Introduction to Operating Systems,151,Operating System Services,2,0.01,0.0176,0.0122,Low
+Operating Systems,1,Introduction to Operating Systems,152,Process Concepts and Scheduling,3,0.0149,0.0228,0.0173,Low
+Operating Systems,1,Introduction to Operating Systems,153,Operations on Processes,7,0.0348,0.0259,0.0321,Medium
+Operating Systems,1,Introduction to Operating Systems,154,Cooperating Processes,1,0.005,0.0083,0.006,Low
+Operating Systems,1,Introduction to Operating Systems,155,Threads,10,0.0498,0.0434,0.0479,High
+Operating Systems,2,CPU Scheduling and Deadlocks,156,Scheduling Criteria,11,0.0547,0.06,0.0563,High
+Operating Systems,2,CPU Scheduling and Deadlocks,157,Scheduling Algorithms,2,0.01,0.0062,0.0088,Low
+Operating Systems,2,CPU Scheduling and Deadlocks,158,Multiple-Processor Scheduling,1,0.005,0.0072,0.0057,Low
+Operating Systems,2,CPU Scheduling and Deadlocks,159,Deadlocks System Model,3,0.0149,0.0145,0.0148,Low
+Operating Systems,2,CPU Scheduling and Deadlocks,160,Deadlock Characterization,5,0.0249,0.0176,0.0227,Medium
+Operating Systems,2,CPU Scheduling and Deadlocks,161,Methods for Handling Deadlocks,3,0.0149,0.0052,0.012,Low
+Operating Systems,2,CPU Scheduling and Deadlocks,162,Deadlock Prevention,4,0.0199,0.0165,0.0189,Low
+Operating Systems,2,CPU Scheduling and Deadlocks,163,Deadlock Avoidance,0,0.0,0.0,0.0,Low
+Operating Systems,2,CPU Scheduling and Deadlocks,164,Deadlock Detection and Recovery,1,0.005,0.0093,0.0063,Low
+Operating Systems,3,Process Synchronization and IPC,165,Critical Section Problem,3,0.0149,0.0062,0.0123,Low
+Operating Systems,3,Process Synchronization and IPC,166,Synchronization Hardware,0,0.0,0.0,0.0,Low
+Operating Systems,3,Process Synchronization and IPC,167,Semaphores,8,0.0398,0.0414,0.0403,Medium
+Operating Systems,3,Process Synchronization and IPC,168,Classical Problems of Synchronization,1,0.005,0.0052,0.005,Low
+Operating Systems,3,Process Synchronization and IPC,169,Critical Regions,1,0.005,0.0,0.0035,Low
+Operating Systems,3,Process Synchronization and IPC,170,Monitors,2,0.01,0.0145,0.0113,Low
+Operating Systems,3,Process Synchronization and IPC,171,IPC Between Processes on a Single System,2,0.01,0.0155,0.0116,Low
+Operating Systems,3,Process Synchronization and IPC,172,IPC Between Processes on Different Systems,0,0.0,0.0,0.0,Low
+Operating Systems,3,Process Synchronization and IPC,173,Pipes and FIFOs,0,0.0,0.0,0.0,Low
+Operating Systems,3,Process Synchronization and IPC,174,Message Queues,1,0.005,0.0072,0.0057,Low
+Operating Systems,3,Process Synchronization and IPC,175,Shared Memory,1,0.005,0.0093,0.0063,Low
+Operating Systems,4,Memory Management,176,Logical Versus Physical Address Space,8,0.0398,0.0527,0.0437,High
+Operating Systems,4,Memory Management,177,Address Binding at Compile Time and Load Time,0,0.0,0.0,0.0,Low
+Operating Systems,4,Memory Management,178,Virtual Address Space,3,0.0149,0.0134,0.0145,Low
+Operating Systems,4,Memory Management,179,Memory Management Unit (MMU),7,0.0348,0.0424,0.0371,Medium
+Operating Systems,4,Memory Management,180,Relocation Register,3,0.0149,0.0134,0.0145,Low
+Operating Systems,5,File Systems and Disk Management,181,File System Interface and Access Methods,6,0.0299,0.0238,0.028,Medium
+Operating Systems,5,File Systems and Disk Management,182,Directory Structure,4,0.0199,0.0176,0.0192,Medium
+Operating Systems,5,File Systems and Disk Management,183,File Protection,7,0.0348,0.031,0.0337,Medium
+Operating Systems,5,File Systems and Disk Management,184,File System Structure,3,0.0149,0.0155,0.0151,Low
+Operating Systems,5,File Systems and Disk Management,185,File Allocation Methods,9,0.0448,0.0424,0.0441,High
+Operating Systems,5,File Systems and Disk Management,186,Kernel Support for Files,0,0.0,0.0,0.0,Low
+Operating Systems,5,File Systems and Disk Management,187,System Calls for File I/O Operations,4,0.0199,0.0217,0.0204,Medium
+Operating Systems,5,File Systems and Disk Management,188,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,7,0.0348,0.0279,0.0328,Medium
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",189,Overview of the Internet,3,0.016,0.0149,0.0157,Medium
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",190,Protocol Layering Scenario,0,0.0,0.0,0.0,Low
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",191,TCP/IP Protocol Suite,0,0.0,0.0,0.0,Low
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",192,The OSI Model,0,0.0,0.0,0.0,Low
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",193,"Internet History, Standards and Administration",2,0.0107,0.0032,0.0084,Low
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",194,Comparison of OSI and TCP/IP Reference Model,7,0.0374,0.034,0.0364,High
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",195,Physical Layer Guided Transmission Media,11,0.0588,0.0627,0.06,High
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",196,Physical Layer Wireless Transmission Media,5,0.0267,0.0351,0.0292,High
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",197,Data Link Layer Design Issues,7,0.0374,0.0372,0.0374,High
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",198,CRC Codes,5,0.0267,0.0255,0.0264,Medium
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",199,Elementary Data Link Layer Protocols,1,0.0053,0.0011,0.0041,Low
+Computer Networks,1,"Overview of Internet, Physical Layer and Data Link Layer",200,Sliding Window Protocol,5,0.0267,0.0351,0.0292,High
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,201,Multi Access Protocols,1,0.0053,0.0043,0.005,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,202,ALOHA,4,0.0214,0.0266,0.0229,Medium
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,203,CSMA,5,0.0267,0.0202,0.0248,Medium
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,204,Collision Free Protocols,2,0.0107,0.0053,0.0091,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,205,Ethernet Physical Layer,2,0.0107,0.0053,0.0091,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,206,Ethernet MAC Sublayer,1,0.0053,0.0032,0.0047,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,207,Data Link Layer Switching,2,0.0107,0.017,0.0126,Medium
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,208,Use of Bridges,1,0.0053,0.0021,0.0044,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,209,Learning Bridges,0,0.0,0.0,0.0,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,210,Spanning Tree Bridges,0,0.0,0.0,0.0,Low
+Computer Networks,2,Multiple Access Protocols and Data Link Layer Switching,211,"Repeaters, Hubs, Bridges, Switches, Routers and Gateways",2,0.0107,0.0117,0.011,Medium
+Computer Networks,3,Network Layer and Routing,212,Network Layer Design Issues,5,0.0267,0.0234,0.0257,Medium
+Computer Networks,3,Network Layer and Routing,213,Store and Forward Packet Switching,0,0.0,0.0,0.0,Low
+Computer Networks,3,Network Layer and Routing,214,Connectionless and Connection Oriented Networks,2,0.0107,0.0074,0.0097,Low
+Computer Networks,3,Network Layer and Routing,215,Routing Algorithms,4,0.0214,0.017,0.0201,Medium
+Computer Networks,3,Network Layer and Routing,216,Optimality Principle,2,0.0107,0.0064,0.0094,Low
+Computer Networks,3,Network Layer and Routing,217,Shortest Path Routing,3,0.016,0.017,0.0163,Medium
+Computer Networks,3,Network Layer and Routing,218,Flooding,2,0.0107,0.0085,0.01,Low
+Computer Networks,3,Network Layer and Routing,219,Distance Vector Routing,5,0.0267,0.0276,0.027,Medium
+Computer Networks,3,Network Layer and Routing,220,Count to Infinity Problem,1,0.0053,0.0043,0.005,Low
+Computer Networks,3,Network Layer and Routing,221,Hierarchical Routing,4,0.0214,0.0128,0.0188,Medium
+Computer Networks,3,Network Layer and Routing,222,Congestion Control Algorithms,10,0.0535,0.051,0.0527,High
+Computer Networks,3,Network Layer and Routing,223,Admission Control,0,0.0,0.0,0.0,Low
+Computer Networks,4,Internetworking and Transport Layer,224,Tunneling,1,0.0053,0.0043,0.005,Low
+Computer Networks,4,Internetworking and Transport Layer,225,Internetwork Routing,1,0.0053,0.0032,0.0047,Low
+Computer Networks,4,Internetworking and Transport Layer,226,Packet Fragmentation,1,0.0053,0.0064,0.0057,Low
+Computer Networks,4,Internetworking and Transport Layer,227,IPv4 Protocol,2,0.0107,0.0085,0.01,Low
+Computer Networks,4,Internetworking and Transport Layer,228,IPv6 Protocol,1,0.0053,0.0032,0.0047,Low
+Computer Networks,4,Internetworking and Transport Layer,229,IP Addresses,1,0.0053,0.0043,0.005,Low
+Computer Networks,4,Internetworking and Transport Layer,230,CIDR,1,0.0053,0.0043,0.005,Low
+Computer Networks,4,Internetworking and Transport Layer,231,ICMP,4,0.0214,0.0287,0.0236,Medium
+Computer Networks,4,Internetworking and Transport Layer,232,ARP,2,0.0107,0.0149,0.0119,Medium
+Computer Networks,4,Internetworking and Transport Layer,233,RARP,0,0.0,0.0,0.0,Low
+Computer Networks,4,Internetworking and Transport Layer,234,DHCP,0,0.0,0.0,0.0,Low
+Computer Networks,4,Internetworking and Transport Layer,235,Transport Layer Services to Upper Layers,7,0.0374,0.0436,0.0393,High
+Computer Networks,4,Internetworking and Transport Layer,236,Elements of Transport Protocol,14,0.0749,0.0956,0.0811,High
+Computer Networks,4,Internetworking and Transport Layer,237,Addressing,1,0.0053,0.0011,0.0041,Low
+Computer Networks,4,Internetworking and Transport Layer,238,Connection Establishment,2,0.0107,0.0096,0.0104,Medium
+Computer Networks,4,Internetworking and Transport Layer,239,Connection Release,1,0.0053,0.0,0.0037,Low
+Computer Networks,4,Internetworking and Transport Layer,240,Crash Recovery,0,0.0,0.0,0.0,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,241,UDP and RPC,4,0.0214,0.0244,0.0223,Medium
+Computer Networks,5,Internet Transport Protocols and Application Layer,242,Real Time Transport Protocols,1,0.0053,0.0064,0.0057,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,243,Introduction to TCP,6,0.0321,0.0393,0.0343,High
+Computer Networks,5,Internet Transport Protocols and Application Layer,244,TCP Service Model,1,0.0053,0.0064,0.0057,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,245,TCP Segment Header,2,0.0107,0.0053,0.0091,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,246,TCP Connection Establishment,2,0.0107,0.0106,0.0107,Medium
+Computer Networks,5,Internet Transport Protocols and Application Layer,247,TCP Connection Release,2,0.0107,0.0074,0.0097,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,248,TCP Connection Management Modeling,0,0.0,0.0,0.0,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,249,TCP Sliding Window,2,0.0107,0.0085,0.01,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,250,TCP Congestion Control,0,0.0,0.0,0.0,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,251,Future of TCP,0,0.0,0.0,0.0,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,252,Application Layer Introduction,2,0.0107,0.0159,0.0123,Medium
+Computer Networks,5,Internet Transport Protocols and Application Layer,253,Application Layer Paradigms,1,0.0053,0.0032,0.0047,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,254,Client Server Model,1,0.0053,0.0032,0.0047,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,255,HTTP,4,0.0214,0.0255,0.0226,Medium
+Computer Networks,5,Internet Transport Protocols and Application Layer,256,FTP,1,0.0053,0.0074,0.006,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,257,Electronic Mail,6,0.0321,0.0425,0.0352,High
+Computer Networks,5,Internet Transport Protocols and Application Layer,258,TELNET,1,0.0053,0.0032,0.0047,Low
+Computer Networks,5,Internet Transport Protocols and Application Layer,259,DNS,8,0.0428,0.0436,0.043,High
+Computer Networks,5,Internet Transport Protocols and Application Layer,260,SSH,0,0.0,0.0,0.0,Low
+DBMS,1,Introduction to Database Systems,338,Database System Applications,5,0.0403,0.0356,0.0389,High
+DBMS,1,Introduction to Database Systems,339,File Systems versus a DBMS,4,0.0323,0.0397,0.0345,High
+DBMS,1,Introduction to Database Systems,340,Data Models,4,0.0323,0.046,0.0364,High
+DBMS,1,Introduction to Database Systems,341,Levels of abstraction in a DBMS,2,0.0161,0.0251,0.0188,Medium
+DBMS,1,Introduction to Database Systems,342,Data independence,0,0.0,0.0,0.0,Low
+DBMS,1,Introduction to Database Systems,343,Structure of a DBMS,6,0.0484,0.0607,0.0521,High
+DBMS,1,Introduction to Database Systems,344,Database design and ER diagrams,4,0.0323,0.023,0.0295,Medium
+DBMS,1,Introduction to Database Systems,345,"Entities, Attributes, and Entity sets",0,0.0,0.0,0.0,Low
+DBMS,1,Introduction to Database Systems,346,Relationships and Relationship sets,1,0.0081,0.0,0.0056,Low
+DBMS,1,Introduction to Database Systems,347,Additional features of the ER model,4,0.0323,0.0314,0.032,High
+DBMS,1,Introduction to Database Systems,348,Conceptual design with the ER model,0,0.0,0.0,0.0,Low
+DBMS,2,Relational Model and Algebra,349,Introduction to the Relational Model,2,0.0161,0.023,0.0182,Medium
+DBMS,2,Relational Model and Algebra,350,Integrity constraints over relations,0,0.0,0.0,0.0,Low
+DBMS,2,Relational Model and Algebra,351,Enforcing integrity constraints,1,0.0081,0.0042,0.0069,Low
+DBMS,2,Relational Model and Algebra,352,Database design,0,0.0,0.0,0.0,Low
+DBMS,2,Relational Model and Algebra,353,Logical database design,0,0.0,0.0,0.0,Low
+DBMS,2,Relational Model and Algebra,354,Introduction to views,0,0.0,0.0,0.0,Low
+DBMS,2,Relational Model and Algebra,355,Destroying/altering tables and views,2,0.0161,0.0063,0.0132,Low
+DBMS,2,Relational Model and Algebra,356,Relational algebra,6,0.0484,0.0586,0.0514,High
+DBMS,2,Relational Model and Algebra,357,Tuple relational calculus,4,0.0323,0.0314,0.032,High
+DBMS,2,Relational Model and Algebra,358,Domain relational calculus,3,0.0242,0.0167,0.022,Medium
+DBMS,3,"SQL, Constraints, and Triggers",359,SQL Queries,7,0.0565,0.0795,0.0634,High
+DBMS,3,"SQL, Constraints, and Triggers",360,Form of basic SQL query,0,0.0,0.0,0.0,Low
+DBMS,3,"SQL, Constraints, and Triggers",361,"UNION, INTERSECT, and EXCEPT",1,0.0081,0.0042,0.0069,Low
+DBMS,3,"SQL, Constraints, and Triggers",362,Nested queries,4,0.0323,0.0314,0.032,High
+DBMS,3,"SQL, Constraints, and Triggers",363,Aggregation operators,4,0.0323,0.0272,0.0307,Medium
+DBMS,3,"SQL, Constraints, and Triggers",364,NULL values,0,0.0,0.0,0.0,Low
+DBMS,3,"SQL, Constraints, and Triggers",365,Complex integrity constraints in SQL,2,0.0161,0.023,0.0182,Medium
+DBMS,3,"SQL, Constraints, and Triggers",366,Triggers and active databases,1,0.0081,0.0105,0.0088,Low
+DBMS,4,Schema Refinement and Normalization,367,Schema refinement,4,0.0323,0.0272,0.0307,Medium
+DBMS,4,Schema Refinement and Normalization,368,Problems caused by redundancy,2,0.0161,0.0105,0.0144,Low
+DBMS,4,Schema Refinement and Normalization,369,Decompositions and associated problems,0,0.0,0.0,0.0,Low
+DBMS,4,Schema Refinement and Normalization,370,Reasoning about functional dependencies,0,0.0,0.0,0.0,Low
+DBMS,4,Schema Refinement and Normalization,371,Armstrong's axioms,0,0.0,0.0,0.0,Low
+DBMS,4,Schema Refinement and Normalization,372,Closure of a set of functional dependencies,2,0.0161,0.0188,0.0169,Medium
+DBMS,4,Schema Refinement and Normalization,373,Minimal covers,0,0.0,0.0,0.0,Low
+DBMS,4,Schema Refinement and Normalization,374,First normal form,1,0.0081,0.0126,0.0094,Low
+DBMS,4,Schema Refinement and Normalization,375,Second normal form,2,0.0161,0.0,0.0113,Low
+DBMS,4,Schema Refinement and Normalization,376,Third normal form,1,0.0081,0.0063,0.0075,Low
+DBMS,4,Schema Refinement and Normalization,377,BCNF,0,0.0,0.0,0.0,Low
+DBMS,4,Schema Refinement and Normalization,378,Multivalued dependencies,2,0.0161,0.0146,0.0157,Medium
+DBMS,4,Schema Refinement and Normalization,379,Fourth normal form,5,0.0403,0.0439,0.0414,High
+DBMS,4,Schema Refinement and Normalization,380,Lossless join decomposition,1,0.0081,0.0126,0.0094,Low
+DBMS,5,Transaction Management and Recovery,381,Transaction concept,3,0.0242,0.0251,0.0245,Medium
+DBMS,5,Transaction Management and Recovery,382,Transaction state,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,383,System log,2,0.0161,0.0188,0.0169,Medium
+DBMS,5,Transaction Management and Recovery,384,Commit point,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,385,Desirable properties,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,386,Concurrent executions,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,387,Serializability,2,0.0161,0.0314,0.0207,Medium
+DBMS,5,Transaction Management and Recovery,388,Recoverability,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,389,Implementation of isolation,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,390,Testing for serializability,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,391,Serializability by locks,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,392,Locking systems with several lock modes,5,0.0403,0.0439,0.0414,High
+DBMS,5,Transaction Management and Recovery,393,Concurrency control by timestamps,3,0.0242,0.0188,0.0226,Medium
+DBMS,5,Transaction Management and Recovery,394,Validation,2,0.0161,0.0209,0.0176,Medium
+DBMS,5,Transaction Management and Recovery,395,Log-based recovery,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,396,Recovery with concurrent transactions,1,0.0081,0.0126,0.0094,Low
+DBMS,5,Transaction Management and Recovery,397,Checkpoints,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,398,Buffer management,3,0.0242,0.0188,0.0226,Medium
+DBMS,5,Transaction Management and Recovery,399,Failure with loss of non-volatile storage,2,0.0161,0.0042,0.0125,Low
+DBMS,5,Transaction Management and Recovery,400,External Storage and Indexing,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,401,Heap Files,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,402,Sequential Files,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,403,Clustered Files,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,404,Primary Index,3,0.0242,0.0084,0.0194,Medium
+DBMS,5,Transaction Management and Recovery,405,Secondary Index,2,0.0161,0.0188,0.0169,Medium
+DBMS,5,Transaction Management and Recovery,406,Cluster Index,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,407,ISAM,0,0.0,0.0,0.0,Low
+DBMS,5,Transaction Management and Recovery,408,B+ Trees,3,0.0242,0.023,0.0238,Medium
+DBMS,5,Transaction Management and Recovery,409,Static Hashing,1,0.0081,0.0167,0.0107,Low
+DBMS,5,Transaction Management and Recovery,410,Extendible Hashing,3,0.0242,0.0105,0.0201,Medium
+DBMS,5,Transaction Management and Recovery,411,Linear Hashing,2,0.0161,0.0042,0.0125,Low

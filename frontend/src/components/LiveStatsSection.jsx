@@ -38,10 +38,6 @@ export default function LiveStatsSection() {
 
   const [selectedDemo, setSelectedDemo] = useState(sampleQueries[0]);
 
-  useEffect(() => {
-    fetchLiveStats();
-  }, []);
-
   const fetchLiveStats = async () => {
     try {
       setLoadingStats(true);
@@ -60,6 +56,10 @@ export default function LiveStatsSection() {
       setLoadingStats(false);
     }
   };
+
+  useEffect(() => {
+    fetchLiveStats();
+  }, []);
 
   return (
     <section id="benchmarks" className="py-20 bg-[#0a0a0a] text-neutral-100 relative border-t border-neutral-800">

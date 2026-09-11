@@ -1,0 +1,8 @@
+Model Name,Gated/Abstain?,Coverage,Accuracy-on-Covered,Raw Top1 Accuracy,Raw Top1 Correct,Raw Top3 Accuracy,Raw Top3 Correct,Macro F1,n_evaluated,Script/Source
+TF-IDF + Logistic Regression,No,1.0000,0.2227,0.2227,51,0.3755,86,0.1361,229,run_academic_strengthening.py
+all-MiniLM-L6-v2 Cosine NN,No,1.0000,0.5197,0.5197,119,0.7205,165,0.4214,229,run_academic_strengthening.py
+Base SBERT NN (Local),No,1.0000,0.5284,0.5284,121,0.7249,166,0.4312,229,run_academic_strengthening.py
+Full CAPT-M (Base SBERT),Yes,0.9170,0.5571,0.5109,117,0.6114,140,0.4667,229,baseline_comparison.py
+FT SBERT NN only (Clean-97),No,1.0000,0.6288,0.6288,144,0.7773,178,0.4941,229,run_academic_strengthening.py (Ablation Stage 1)
+FT Hybrid (Clean-97),No,1.0000,0.6463,0.6463,148,0.8297,190,0.5482,229,run_academic_strengthening.py
+FT Hybrid Gated (Clean-97),Yes,0.9170,0.6714,0.6157,141,0.6157,141,0.4658,229,generate_academic_additions.py

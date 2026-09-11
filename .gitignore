@@ -25,5 +25,24 @@ Thumbs.db
 # Uploads
 uploads/
 
-# Evaluation outputs
-evaluation/output/
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Scratch & IDE agent directories
+scratch/
+.agents/
+**/.agents/
+
+# Model checkpoints & large binaries
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.onnx
+research/models/

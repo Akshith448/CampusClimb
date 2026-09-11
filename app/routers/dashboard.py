@@ -1,146 +1,269 @@
 """
-Dashboard Router — View endpoints for the home page, topic dashboard, and 
-topic detail pages.
+Dashboard Router — Versioned REST API v1 endpoints for CampusClimb Dashboard.
+
+Provides high-performance aggregated metrics, topic breakdown, and telemetry stats.
+Hardened against N+1 query patterns by using batch fetching and in-memory indexing.
 """
 
+import json
+import logging
 from collections import defaultdict
+from typing import Any, Dict
 
-from fastapi import  APIRouter, Depends, Request
-from sqlalchemy.orm import Session
-from starlette.responses import HTMLResponse
+from fastapi import APIRouter, Depends, Query, Request
+from sqlalchemy.orm import Session, joinedload
 
+from app.auth import get_current_user
 from app.database import get_db
-from app.models import SyllabusTopic, Note, NoteChunk, PYQ, TopicImportance
+from app.models import Note, NoteChunk, PYQ, SyllabusTopic, TopicImportance
+from app.rate_limiter import ai_rate_limiter
+from core.embeddings import cosine_sim
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
 
-@router.get("/", response_class=HTMLResponse)
-async def home(request: Request, msg: str = None, db: Session = Depends(get_db)):
-    """Home page with upload forms and system statistics."""
-    templates = request.app.state.templates
-
+@router.get("/api/v1/stats")
+async def get_system_stats(request: Request, db: Session = Depends(get_db)):
+    """Global telemetry statistics for home landing page.
+    
+    Protected by rate limiting against reconnaissance / scraping abuse.
+    """
+    ai_rate_limiter.check(request)
     syllabus_count = db.query(SyllabusTopic).count()
     notes_count = db.query(Note).count()
     pyq_count = db.query(PYQ).count()
 
-    return templates.TemplateResponse("index.html", {
-        "request": request,
-        "msg": msg,
+    subjects = db.query(SyllabusTopic.subject).distinct().all()
+    supported = [s[0] for s in subjects if s[0]] or ["Operating Systems", "DBMS", "Computer Networks"]
+
+    return {
         "syllabus_count": syllabus_count,
         "notes_count": notes_count,
         "pyq_count": pyq_count,
-    })
+        "supported_subjects": supported,
+    }
 
 
-@router.get("/dashboard", response_class=HTMLResponse)
-async def dashboard(request: Request, msg: str = None, db: Session = Depends(get_db)):
-    """Dashboard showing all topics ranked by importance."""
-    templates = request.app.state.templates
-
-    topics = db.query(SyllabusTopic).order_by(SyllabusTopic.unit_number).all()
-
-    # Build topic data with importance and chunk counts
-    topic_data = []
-    for topic in topics:
-        importance = db.query(TopicImportance).filter(
-            TopicImportance.topic_id == topic.id
-        ).first()
-
-        chunk_count = db.query(NoteChunk).filter(
-            NoteChunk.matched_topic_id == topic.id,
-            NoteChunk.is_representative == True,  # noqa: E712
-        ).count()
-
-        topic_data.append({
-            "id": topic.id,
-            "unit_number": topic.unit_number,
-            "unit_name": topic.unit_name,
-            "topic_name": topic.topic_name,
-            "importance_score": importance.importance_score if importance else 0.0,
-            "importance_label": importance.importance_label if importance else "N/A",
-            "question_count": importance.question_count if importance else 0,
-            "chunk_count": chunk_count,
-        })
-
-    # Sort by importance score descending
-    topic_data.sort(key=lambda t: t["importance_score"], reverse=True)
-
-    return templates.TemplateResponse("dashboard.html", {
-        "request": request,
-        "msg": msg,
-        "topics": topic_data,
-    })
-
-
-@router.get("/topic/{topic_id}", response_class=HTMLResponse)
-async def topic_detail(
-    request: Request,
-    topic_id: int,
+@router.get("/api/v1/dashboard")
+async def get_user_dashboard(
+    subject: str = Query("Operating Systems"),
     db: Session = Depends(get_db),
+    _current_user: Dict[str, Any] = Depends(get_current_user),
 ):
-    """Detail view for a single topic with deduplicated note chunks."""
-    templates = request.app.state.templates
+    """Retrieve structured, user-scoped dashboard overview and topic breakdown.
+    
+    Optimized: All TopicImportance and NoteChunk records are batch-fetched in 2 queries
+    instead of 2 * N queries inside the topic iteration loop.
+    """
+    user_id = _current_user.get("id")
+    subject_clean = (subject or "Operating Systems").strip()
 
-    topic = db.query(SyllabusTopic).filter(SyllabusTopic.id == topic_id).first()
-    if not topic:
-        return templates.TemplateResponse("topic_detail.html", {
-            "request": request,
-            "topic": None,
-            "importance": None,
-            "representative_chunks": [],
-            "clusters": {},
-        })
+    # 1. Overview metrics
+    user_notes = (
+        db.query(Note)
+        .filter(Note.user_id == user_id, Note.subject == subject_clean)
+        .all()
+    )
+    user_note_ids = [n.id for n in user_notes]
 
-    importance = db.query(TopicImportance).filter(
-        TopicImportance.topic_id == topic_id
-    ).first()
-
-    # Get all chunks for this topic
-    all_chunks = db.query(NoteChunk).filter(
-        NoteChunk.matched_topic_id == topic_id
-    ).all()
-
-    # Build representative chunks with student info
-    representative_chunks = []
-    clusters = defaultdict(list)
-
-    for chunk in all_chunks:
-        note = chunk.note
-        chunk_info = {
-            "id": chunk.id,
-            "chunk_text": chunk.chunk_text,
-            "student_name": note.student_name if note else "Unknown",
-            "similarity_score": chunk.similarity_score,
-            "cluster_id": chunk.cluster_id,
-            "is_representative": chunk.is_representative,
-        }
-
-        if chunk.is_representative:
-            representative_chunks.append(chunk_info)
-
-        if chunk.cluster_id is not None:
-            clusters[chunk.cluster_id].append(chunk_info)
-
-    # Sort representatives by similarity score descending
-    representative_chunks.sort(
-        key=lambda c: c["similarity_score"] or 0, reverse=True
+    total_notes = len(user_notes)
+    total_topics = (
+        db.query(SyllabusTopic)
+        .filter(SyllabusTopic.subject == subject_clean)
+        .count()
+    )
+    total_pyqs = (
+        db.query(PYQ)
+        .join(SyllabusTopic)
+        .filter(SyllabusTopic.subject == subject_clean)
+        .count()
     )
 
-    return templates.TemplateResponse("topic_detail.html", {
-        "request": request,
-        "topic": {
-            "id": topic.id,
-            "unit_number": topic.unit_number,
-            "unit_name": topic.unit_name,
-            "topic_name": topic.topic_name,
+    total_chunks = 0
+    rep_chunks = 0
+    if user_note_ids:
+        total_chunks = (
+            db.query(NoteChunk)
+            .filter(NoteChunk.note_id.in_(user_note_ids))
+            .count()
+        )
+        rep_chunks = (
+            db.query(NoteChunk)
+            .filter(
+                NoteChunk.note_id.in_(user_note_ids),
+                NoteChunk.is_representative == True,
+            )
+            .count()
+        )
+
+    dedup_pct = 0.0
+    if total_chunks > 0:
+        dedup_pct = round(((total_chunks - rep_chunks) / total_chunks) * 100, 1)
+
+    # 2. Topic breakdown for subject
+    topics = (
+        db.query(SyllabusTopic)
+        .filter(SyllabusTopic.subject == subject_clean)
+        .order_by(SyllabusTopic.unit_number, SyllabusTopic.id)
+        .all()
+    )
+
+    topic_ids = [t.id for t in topics]
+
+    # Batch-fetch all TopicImportance records for these topics in ONE query
+    importance_map: Dict[int, TopicImportance] = {}
+    if topic_ids:
+        importances = (
+            db.query(TopicImportance)
+            .filter(TopicImportance.topic_id.in_(topic_ids))
+            .all()
+        )
+        importance_map = {imp.topic_id: imp for imp in importances}
+
+    # Batch-fetch all user NoteChunks for these topics in ONE query (eager-loading note)
+    chunks_by_topic: Dict[int, list] = defaultdict(list)
+    if user_note_ids and topic_ids:
+        chunks_db = (
+            db.query(NoteChunk)
+            .options(joinedload(NoteChunk.note))
+            .filter(
+                NoteChunk.note_id.in_(user_note_ids),
+                NoteChunk.matched_topic_id.in_(topic_ids),
+            )
+            .order_by(NoteChunk.is_representative.desc(), NoteChunk.similarity_score.desc())
+            .all()
+        )
+        for c in chunks_db:
+            chunks_by_topic[c.matched_topic_id].append(c)
+
+    # Assemble response in-memory with zero per-topic SQL queries
+    topic_list = []
+    for t in topics:
+        imp = importance_map.get(t.id)
+        raw_topic_chunks = chunks_by_topic.get(t.id, [])
+        total_topic_chunks = len(raw_topic_chunks)
+
+        # Distinct notes contributing to this topic
+        contributing_note_ids = {c.note_id for c in raw_topic_chunks if c.note_id}
+        source_count = len(contributing_note_ids)
+
+        # Count representative vs non-representative chunks for per-topic dedup reduction
+        rep_chunks_count = sum(1 for c in raw_topic_chunks if c.is_representative)
+        topic_dedup_reduction_pct = 0.0
+        if total_topic_chunks > 0:
+            topic_dedup_reduction_pct = round(
+                ((total_topic_chunks - rep_chunks_count) / total_topic_chunks) * 100, 1
+            )
+
+        # Group chunks by cluster_id
+        clusters: Dict[Any, list] = defaultdict(list)
+        for c in raw_topic_chunks:
+            # If cluster_id is None, treat c.id as unique cluster key
+            c_key = c.cluster_id if c.cluster_id is not None else f"single_{c.id}"
+            clusters[c_key].append(c)
+
+        merged_notes = []
+        flat_chunks = []
+
+        for c_key, member_chunks in clusters.items():
+            # Find representative chunk (or fall back to first/longest)
+            rep_chunk = next((m for m in member_chunks if m.is_representative), member_chunks[0])
+            rep_embedding = json.loads(rep_chunk.embedding) if rep_chunk.embedding else None
+
+            duplicates = []
+            for m in member_chunks:
+                if m.id == rep_chunk.id:
+                    continue
+
+                # Compute pairwise cosine similarity between duplicate and representative
+                sim_to_rep = 0.0
+                if rep_embedding and m.embedding:
+                    try:
+                        m_embedding = json.loads(m.embedding)
+                        sim_to_rep = round(cosine_sim(rep_embedding, m_embedding), 4)
+                    except Exception:
+                        sim_to_rep = m.similarity_score or 0.0
+                else:
+                    sim_to_rep = m.similarity_score or 0.0
+
+                note_id = m.note_id
+                filename = m.note.original_filename if m.note else f"Note #{note_id}"
+                duplicates.append({
+                    "id": m.id,
+                    "note_id": note_id,
+                    "source_note": f"Note #{note_id}",
+                    "source_filename": filename,
+                    "chunk_text": m.chunk_text,
+                    "similarity_to_rep": sim_to_rep,
+                    "similarity_pct": round(max(0.0, sim_to_rep) * 100, 1),
+                })
+
+            # Sort duplicates by similarity descending
+            duplicates.sort(key=lambda d: d["similarity_to_rep"], reverse=True)
+
+            # Distinct notes contributing to this specific merged cluster
+            cluster_note_ids = {m.note_id for m in member_chunks if m.note_id}
+            cluster_source_count = len(cluster_note_ids)
+
+            rep_display_text = rep_chunk.cleaned_text if rep_chunk.cleaned_text else rep_chunk.chunk_text
+
+            merged_notes.append({
+                "cluster_id": rep_chunk.cluster_id,
+                "representative_chunk_id": rep_chunk.id,
+                "representative_note_id": rep_chunk.note_id,
+                "representative_source_note": f"Note #{rep_chunk.note_id}",
+                "representative_source_filename": rep_chunk.note.original_filename if rep_chunk.note else f"Note #{rep_chunk.note_id}",
+                "representative_text": rep_display_text,
+                "raw_representative_text": rep_chunk.chunk_text,
+                "cleaned_text": rep_chunk.cleaned_text,
+                "diagram_mermaid": rep_chunk.diagram_mermaid,
+                "source_count": cluster_source_count,
+                "merged_count": len(duplicates),
+                "duplicates": duplicates,
+            })
+
+            # Maintain backwards-compatible flat list for legacy consumers
+            for m in member_chunks:
+                flat_chunks.append({
+                    "id": m.id,
+                    "note_id": m.note_id,
+                    "source_note": f"Note #{m.note_id}",
+                    "chunk_text": m.chunk_text,
+                    "student_name": m.note.student_name if m.note else "Student",
+                    "similarity_score": m.similarity_score or 0.0,
+                    "is_representative": m.is_representative,
+                    "cluster_id": m.cluster_id,
+                })
+
+        topic_list.append({
+            "id": t.id,
+            "unit_number": t.unit_number,
+            "unit_name": t.unit_name,
+            "topic_name": t.topic_name,
+            "importance_score": round(imp.importance_score, 4) if imp else 0.0,
+            "importance_label": imp.importance_label if imp else "Low",
+            "question_count": imp.question_count if imp else 0,
+            "chunk_count": total_topic_chunks,
+            "source_count": source_count,
+            "dedup_reduction_pct": topic_dedup_reduction_pct,
+            "merged_notes": merged_notes,
+            "chunks": flat_chunks,
+        })
+
+    # Sort topics by importance_score descending
+    topic_list.sort(key=lambda item: item["importance_score"], reverse=True)
+
+    return {
+        "subject": subject_clean,
+        "stats": {
+            "total_notes": total_notes,
+            "total_topics": total_topics,
+            "total_pyqs": total_pyqs,
+            "total_user_chunks": total_chunks,
+            "representative_chunks": rep_chunks,
+            "dedup_reduction_pct": dedup_pct,
         },
-        "importance": {
-            "score": importance.importance_score,
-            "label": importance.importance_label,
-            "question_count": importance.question_count,
-        } if importance else None,
-        "representative_chunks": representative_chunks,
-        "clusters": dict(clusters),
-        "total_chunks": len(all_chunks),
-    })
+        "topics": topic_list,
+    }

@@ -1,0 +1,9 @@
+Metric,Value,Numerator,Denominator,Description
+Coverage,0.917,210,229,Percentage of samples with a topic assignment (non-None)
+Accuracy_on_Covered,0.6714,141,210,Top1 accuracy strictly over the covered subset
+Raw_Accuracy,0.6157,141,229,Overall Top1 accuracy with abstentions counted as incorrect
+
+Subject,Abstention_Rate,Abstained_Count,Total_Count,Description
+Operating Systems,0.0947,9,95,Subject-specific abstention rate
+Computer Networks,0.0484,3,62,Subject-specific abstention rate
+DBMS,0.0972,7,72,Subject-specific abstention rate

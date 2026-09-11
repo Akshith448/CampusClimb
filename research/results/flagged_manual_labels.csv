@@ -1,0 +1,240 @@
+pyq_id,subject,question_text,assigned_topic_id,assigned_topic_name,status
+90,Operating Systems,R22 Code No: 184BZ JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+92,Operating Systems,"Part-A for 10 marks, ii) Part-B for 50 marks. (cid:127) Part-A is a compulsory question which consists of ten sub-questions from all units carrying equal marks. (cid:127) Part-B consists of ten questions (numbered from 2 to 11) carrying 10 marks each. From each unit, there are two questions and the student should answer one of them. Hence, the student should answer five questions from Part-B. PART – A (10 Marks)",,,EXCLUDE
+112,Operating Systems,R18 Code No: 154BR JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+114,Operating Systems,"Part A is compulsory, which carries 25 marks. In Part A, answer all questions.",,,EXCLUDE
+115,Operating Systems,"In Part B, Answer any one question from each unit. Each question carries 10 marks and may have a, b as sub questions. PART – A (25 Marks)",,,EXCLUDE
+121,Operating Systems,What is resource allocation graph? Why it is used? [3],159,Deadlocks System Model,LOCKED
+130,Operating Systems,a) What is a process? Distinguish between a process and a program.,152,Process Concepts and Scheduling,LOCKED
+141,Operating Systems,R18 Code No: 154BR JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+143,Operating Systems,"Part A is compulsory, which carries 25 marks. In Part A, answer all questions.",,,EXCLUDE
+144,Operating Systems,"UIn Part B, Answer any one question from each unit. Each question carries 10 marks and may have a, b as sub questions. H PART – A (25 Marks)",,,EXCLUDE
+152,Operating Systems,What is a file? [2] a,181,File System Interface and Access Methods,LOCKED
+156,Operating Systems,a) Under what circumstances would a user be better off using a timesharing system rather than a PC or single-user workstation.,145,Time-shared Systems,LOCKED
+158,Operating Systems,"a) Describe the differences among short-term, medium-term, and long-term scheduling.",156,Scheduling Criteria,LOCKED
+161,Operating Systems,Why is it important for the scheduler to distinguish I/O-bound programs from CPU- bound programs? [5+5],156,Scheduling Criteria,LOCKED
+163,Operating Systems,Discuss the tradeoff between fairness and throughput of operations in the readers- Twriters problem. Propose a method for solving the readers-writers problem without causing starvation. [10],168,Classical Problems of Synchronization,LOCKED
+164,Operating Systems,"Given five memory partitions of 100 KB, 500 KB, 200 KB, 300 KB, and 600 KB (in order), how would each of the first-fit, best-fit, and worst-fit algorithms place processes H of 212 KB, 417 KB, 112 KB, and 426 KB (in order)? Which algorithm makes the most efficient use of memory? [10]",176,Logical Versus Physical Address Space,LOCKED
+166,Operating Systems,a) What are the advantages of Contiguous allocation? What are the drawbacks of contiguous allocation of disk space? d,176,Logical Versus Physical Address Space,LOCKED
+167,Operating Systems,"Explain the following commands: lseek, stat, ioctl. [4+6]",187,System Calls for File I/O Operations,LOCKED
+168,Operating Systems,Explain in detail about the common scphemes for defining the logical structure of a directory. [10] a p ---ooOoo--- e r s,,,EXCLUDE
+169,Operating Systems,R18 J Code No: 154BR JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+175,Operating Systems,a) Discuss about Process Control Block with a neat diagram.,152,Process Concepts and Scheduling,LOCKED
+179,Operating Systems,a) Discuss about resuming processes within a Monitor. e,170,Monitors,LOCKED
+185,Operating Systems,R18 Code No: 154BR JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+187,Operating Systems,a) WUhat are the various components of operating system structure and explain with a neat sketch.,142,Operating System Introduction,LOCKED
+195,Operating Systems,a) What are the various objectives and functions of operating systems?,142,Operating System Introduction,LOCKED
+200,Operating Systems,R18 Code No: 154BR J JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+206,Operating Systems,a) Explain about the implementation of Access Matrix.,183,File Protection,LOCKED
+212,Operating Systems,Explain about domain protection mechanism in brief. [8+M7] ---ooOoo---,,,EXCLUDE
+213,Operating Systems,R16 Code No: 134BU JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD J,,,EXCLUDE
+215,Operating Systems,a) Define OperaSting systems. List the objectives of Operating System. [2],142,Operating System Introduction,LOCKED
+216,Operating Systems,Illustrate about device controller and drivers. [3],150,System Components,LOCKED
+220,Operating Systems,"Explain first, best fit memory al location techniques. [3]",176,Logical Versus Physical Address Space,LOCKED
+221,Operating Systems,Define the terms seek time and rotational latency. [2],188,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,LOCKED
+222,Operating Systems,What are the various file accessing1 methods? [3],181,File System Interface and Access Methods,LOCKED
+226,Operating Systems,What are the functionalities of Operating Systems? Expla-in in detail. [5+5],142,Operating System Introduction,LOCKED
+228,Operating Systems,What are the various components of Operating System structure? And explain simple layered approach of Operating System in detail. [5+5],142,Operating System Introduction,LOCKED
+230,Operating Systems,With a neat sketch explain process state diagram. 9 [5+5],152,Process Concepts and Scheduling,LOCKED
+233,Operating Systems,What are the disadvantages of single contiguous memory allocation? Explain. [5+5],176,Logical Versus Physical Address Space,LOCKED
+236,Operating Systems,a) Compare and Contrast Free space management and Swap space management. J,188,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,LOCKED
+238,Operating Systems,a) Discuss various types of Disk storage attachments.,188,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,LOCKED
+239,Operating Systems,What are the objectives of file management system? Explain file system architecture. T [5+5],184,File System Structure,LOCKED
+243,Operating Systems,Write the principles of protection? And explain the access matrix in detail. [5+5] S ---ooOoo--- E D A M,,,EXCLUDE
+245,Operating Systems,a) Explain the functions of operating system. [2],142,Operating System Introduction,LOCKED
+246,Operating Systems,Explain about the abstract view of the components of a computer system. [3] S,142,Operating System Introduction,LOCKED
+247,Operating Systems,Distinguish between I/O bound process and CPU bound process. [2],156,Scheduling Criteria,LOCKED
+251,Operating Systems,Explain about the Acyclic graDph directory. [2],182,Directory Structure,LOCKED
+252,Operating Systems,Explain about the Solid state disk. [3],188,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,LOCKED
+253,Operating Systems,What is Access Control? [2],183,File Protection,LOCKED
+255,Operating Systems,Explain how operating systems are used in a variet1y of computing environments. [10],142,Operating System Introduction,LOCKED
+257,Operating Systems,Explain about the dual mode operation in OS with a neat block diagram. [5+5],142,Operating System Introduction,LOCKED
+258,Operating Systems,a) Explain about the Process Control Block.,152,Process Concepts and Scheduling,LOCKED
+268,Operating Systems,a) Explain about the Language based Protection.,183,File Protection,LOCKED
+270,Operating Systems,a) Explain the protection mechanism illustrating the use of protection domain and access control list.,183,File Protection,LOCKED
+272,Operating Systems,Code No: 125EH R15 JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+274,Operating Systems,a) Describe about control card in batch-system. [2],143,Simple Batch Systems,LOCKED
+276,Operating Systems,What do you turn around Time? [2],156,Scheduling Criteria,LOCKED
+277,Operating Systems,Define Process Control Block. [3],152,Process Concepts and Scheduling,LOCKED
+282,Operating Systems,Describe about resource allocation Graph. [2],159,Deadlocks System Model,LOCKED
+284,Operating Systems,a) Define operating system? Elaborate the operating system operations with examples?,142,Operating System Introduction,LOCKED
+285,Operating Systems,Discuss in detail the main advantage of the layered approach to system design? What are the disadvantages of using layered approach? 5+5,142,Operating System Introduction,LOCKED
+286,Operating Systems,Explain the following terms with examples and neat diagrams: 5+5,151,Operating System Services,LOCKED
+287,Operating Systems,Java Virtual Machine b) Para-Virtualization,142,Operating System Introduction,LOCKED
+288,Operating Systems,"a) Differentiate between Long terms, Short term, Medium term Scheduler.",156,Scheduling Criteria,LOCKED
+295,Operating Systems,a) R13 JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD,,,EXCLUDE
+299,Operating Systems,What is the content of the matrix Need?,163,Deadlock Avoidance,LOCKED
+300,Operating Systems,Is the system in a safe state? Why?,163,Deadlock Avoidance,LOCKED
+303,Computer Networks,"Part-A for 10 marks, ii) Part-B for 50 marks. (cid:127) Part-A is a compulsory question which consists of ten sub-questions from all units carrying equal marks. (cid:127) Part-B consists of ten questions (numbered from 2 to 11) carrying 10 marks each. From each unit, there are two questions and the student should answer one of them. Hence, the student should answer five questions from Part-B. PART – A (10 Marks)",,,EXCLUDE
+304,Computer Networks,a) What is Coaxial Cable?,195,Physical Layer Guided Transmission Media,LOCKED
+309,Computer Networks,What is process to process delivery?,235,Transport Layer Services to Upper Layers,LOCKED
+310,Computer Networks,What is MPEG? PART – B (50 Marks),,,EXCLUDE
+313,Computer Networks,Explain fiber optic communication in detail.,195,Physical Layer Guided Transmission Media,LOCKED
+316,Computer Networks,a) Explain the design issues in network layer.,207,Data Link Layer Switching,LOCKED
+319,Computer Networks,Discuss about network layer in the Internet.,207,Data Link Layer Switching,LOCKED
+320,Computer Networks,a) Describe the functionalities of transport layer.,235,Transport Layer Services to Upper Layers,LOCKED
+321,Computer Networks,Give a brief note on connection management at transport layer.,238,Connection Establishment,LOCKED
+322,Computer Networks,"a) With a neat architecture, explain TCP in detail.",243,Introduction to TCP,LOCKED
+323,Computer Networks,Enumerate the differences between TCP and UDP.,241,UDP and RPC,LOCKED
+327,Computer Networks,Give a short note on audio streaming at application layer. ---ooOoo---,,,EXCLUDE
+328,Computer Networks,"Part A is compulsory, which carries 25 marks. In Part A, Answer all questions.",,,EXCLUDE
+329,Computer Networks,"Idn Part B, Answer any one question from each unit. Each question carries 10 marks and may have a, b as sub questions. P PART – A (25 Marks)",,,EXCLUDE
+330,Computer Networks,a) What is a computer npetwork? Explain. [2],189,Overview of the Internet,LOCKED
+331,Computer Networks,Write the properties of fiber optics. [3],195,Physical Layer Guided Transmission Media,LOCKED
+332,Computer Networks,What is framing in data linek layer? Explain. [2],199,Elementary Data Link Layer Protocols,LOCKED
+335,Computer Networks,What is the function of network layer in the Internet? [3],189,Overview of the Internet,LOCKED
+336,Computer Networks,What are the elements of a Transport protocol? [2],236,Elements of Transport Protocol,LOCKED
+337,Computer Networks,How does UDP differ from TCP? List the applications of UDP. [3],241,UDP and RPC,LOCKED
+338,Computer Networks,What is World Wide Web (WWW)? M [2],255,HTTP,LOCKED
+339,Computer Networks,Explain about SNMP. [3] PART – B c (50 Marks),,,EXCLUDE
+341,Computer Networks,"With a neat diagram, explain ARPANET design. - [5+5]",189,Overview of the Internet,LOCKED
+342,Computer Networks,a) Discuss in detail about various network software and hardware.,189,Overview of the Internet,LOCKED
+343,Computer Networks,Explain about various transmission media used in physical layer with a neat sketch. [5+5],195,Physical Layer Guided Transmission Media,LOCKED
+344,Computer Networks,a) What are the various types of error detection methods? Discuss.,198,CRC Codes,LOCKED
+351,Computer Networks,How a connection is established in a Transport Protocol. Explain three protocol scenarios for establishing a connection. [10],238,Connection Establishment,LOCKED
+352,Computer Networks,a) What are the services provided by transport layer to the upper layers? Explain. Ub) Write the structure of TCP pseudo header and explain how it is used in checksum calculation. [5+5],235,Transport Layer Services to Upper Layers,LOCKED
+354,Computer Networks,Describe the typical elements in an audio streaming architecture. [5+5] d,242,Real Time Transport Protocols,LOCKED
+357,Computer Networks,a) | Write the advantages of optical fiber over twisted-pair and coaxial cables. [2],195,Physical Layer Guided Transmission Media,LOCKED
+358,Computer Networks,What are the advantages of having layered architecture? [3],190,Protocol Layering Scenario,LOCKED
+359,Computer Networks,Briefly explain the difference between switch and router. [2],206,Ethernet MAC Sublayer,LOCKED
+360,Computer Networks,Sketch the Manchester encoding for the bit stream: 0001110101. [3],198,CRC Codes,LOCKED
+362,Computer Networks,Differences between CO and CL. [3],235,Elements of Transport Protocol,LOCKED
+363,Computer Networks,What are the functions of ICMP? [3],231,ICMP,LOCKED
+364,Computer Networks,What is the architecture of WWW? [2],255,HTTP,LOCKED
+365,Computer Networks,— Explain the differences between POP3 and IMAP. [3] PART -B (50 Marks),,,EXCLUDE
+368,Computer Networks,a) Discuss about the various transmission media available at the physical layer.,195,Physical Layer Guided Transmission Media,LOCKED
+370,Computer Networks,a) Explain the differences between the switching methods.,206,Ethernet MAC Sublayer,LOCKED
+372,Computer Networks,a) Illustrate the frame structure of IEEE 802.3.,204,Collision Free Protocols,LOCKED
+376,Computer Networks,a) . 5+5 www. jntuonline.com,,,EXCLUDE
+379,Computer Networks,"Part A is compulsory, which carries 25 marks. In Part A, Answer all questions.",,,EXCLUDE
+380,Computer Networks,"In Part B, Answer any one question from each unit. Each question carries 10 marks U and may have a, b as sub questions. H PART – A (25 Marks)",,,EXCLUDE
+381,Computer Networks,a) What is ARPANEUT? [2],189,Overview of the Internet,LOCKED
+382,Computer Networks,Write about Co-axial cable transmission media? [3] s,195,Physical Layer Guided Transmission Media,LOCKED
+383,Computer Networks,What are the advantages of seliding window protocol? [3],200,Sliding Window Protocol,LOCKED
+386,Computer Networks,What is the function of transport layer? [2],235,Transport Layer Services to Upper Layers,LOCKED
+387,Computer Networks,What is UDP? [3] p,241,UDP and RPC,LOCKED
+388,Computer Networks,What is the function of application layer? [2],252,Application Layer Introduction,LOCKED
+391,Computer Networks,Explain about fiber optics transmission media. [10],195,Physical Layer Guided Transmission Media,LOCKED
+392,Computer Networks,Explain the stop-and-wait protocol. [10],199,Elementary Data Link Layer Protocols,LOCKED
+393,Computer Networks,Explain about wireless LAN. [10],205,Ethernet Physical Layer,LOCKED
+397,Computer Networks,Explain the elements of transport layer. [10],236,Elements of Transport Protocol,LOCKED
+398,Computer Networks,Explain the TCP transmission policy. [10],243,Introduction to TCP,LOCKED
+399,Computer Networks,Explain about streaming audio. [10] ---ooOoo---,,,EXCLUDE
+400,Computer Networks,"Code No: 115DT R13 JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY HYDERABAD COMPUTER NETWORKS (Common to CSE, IT) PART-A (25 Marks) PART -B (50 Marks) www. jJntuonline.com ---00000---",,,EXCLUDE
+401,Computer Networks,a) What is Internet. Daifferentiate it from intranet. [2],189,Overview of the Internet,LOCKED
+403,Computer Networks,When do we use hubs? p [2],206,Ethernet MAC Sublayer,LOCKED
+404,Computer Networks,What are main functionalities of routers? What is purpose of using multiprotocol e routers? [3] r,206,Ethernet MAC Sublayer,LOCKED
+408,Computer Networks,Discuss the principles of internetworking. [3],216,Optimality Principle,LOCKED
+409,Computer Networks,What is silly window syndrome? 0 [2],249,TCP Sliding Window,LOCKED
+410,Computer Networks,Draw TCP and UDP headers. - [3] PART - B (50 Marks),,,EXCLUDE
+413,Computer Networks,Describe go back N protocol. [5+5],200,Sliding Window Protocol,LOCKED
+416,Computer Networks,Explain the design issues of network layer. [5+5],207,Data Link Layer Switching,LOCKED
+418,Computer Networks,Given a network address of 192.168.100.0 and a subnet mask of 255.255.255.192.,229,IP Addresses,LOCKED
+419,Computer Networks,How many subnets are created?,229,IP Addresses,LOCKED
+420,Computer Networks,How many hosts are there per subnet? [5+5] u9.a) Discuss ICMP Messages.,229,IP Addresses,LOCKED
+422,Computer Networks,"Ilelustrate the TCP connections, TCP releases with state transition diagram. [10] d",248,TCP Connection Management Modeling,LOCKED
+424,Computer Networks,a) What are the advantages of layered protocol suites? [2],190,Protocol Layering Scenario,LOCKED
+425,Computer Networks,Mention the comparison of fiber optics and copper wire. [3] e,195,Physical Layer Guided Transmission Media,LOCKED
+427,Computer Networks,Write about P-Persistent CSM A. [3],203,CSMA,LOCKED
+428,Computer Networks,Write short note on design issues of network layer. [2],207,Data Link Layer Switching,LOCKED
+433,Computer Networks,Write about client-server model in brief. [3] PART - B 6 (50 Marks),,,EXCLUDE
+436,Computer Networks,Explain the Hamming Code with an example. [4+6],198,CRC Codes,LOCKED
+438,Computer Networks,Explain about the following devices: M,,,EXCLUDE
+441,Computer Networks,Describe about flow Control and buffering in transport layer. [10],235,Transport Layer Services to Upper Layers,LOCKED
+442,Computer Networks,Write in detail about the Internet control message protocol. [10] u s10. How does the Remote procedure call works? Explain it. [10] 11e. Write short notes on the following:,231,ICMP,LOCKED
+445,Computer Networks,Discuss about Internet standards. [8+7] P,189,Overview of the Internet,LOCKED
+446,Computer Networks,a) Describe the Transmission Media. What are the types of Transmission Media? a,195,Physical Layer Guided Transmission Media,LOCKED
+447,Computer Networks,"What are the distinct characteristics of local area networks, explain briefly? [7+8] p",189,Overview of the Internet,LOCKED
+451,Computer Networks,Define Bridge. Explain the different types of Bridges. [8+7] T,206,Ethernet MAC Sublayer,LOCKED
+454,Computer Networks,a) Illustrate design issues of Network layer. C,207,Data Link Layer Switching,LOCKED
+457,Computer Networks,Write a detailed note on transport services. [8+7],235,Transport Layer Services to Upper Layers,LOCKED
+460,Computer Networks,a) WhaDt are the advantages of computer networks?,189,Overview of the Internet,LOCKED
+462,Computer Networks,a) Write about twisted pair cables and coaxial cables with neat diagram. A,195,Physical Layer Guided Transmission Media,LOCKED
+463,Computer Networks,Draw and explain Internet architecture with a neat sketch. [8+7],189,Overview of the Internet,LOCKED
+466,Computer Networks,Explain about simplex stop and wait protocol for noisy channel. [8+7] R,199,Elementary Data Link Layer Protocols,LOCKED
+467,Computer Networks,a) What are the design issues of Network Layer? Explain in detail.,207,Data Link Layer Switching,LOCKED
+470,Computer Networks,Differentiate between broadcasting and multicasting. [7+8] E,213,Store and Forward Packet Switching,LOCKED
+471,Computer Networks,a) Discuss about the performance issues in Transport Layer.,235,Transport Layer Services to Upper Layers,LOCKED
+472,Computer Networks,Explain each field in TCP header with neat diagram. [7+8] P -,243,Introduction to TCP,LOCKED
+474,Computer Networks,Write short notes on World Wide Web. 2 [8+7] ---ooOoo---,,,EXCLUDE
+475,Computer Networks,a) What ius the importance of layered architecture in network models? Discuss in detail.,189,Overview of the Internet,LOCKED
+477,Computer Networks,a) Discuss about Network hardware components in detail. e,189,Overview of the Internet,LOCKED
+478,Computer Networks,What are the advantages of fiber optic cables? Explain with a neat sketch. [7+8] d,195,Physical Layer Guided Transmission Media,LOCKED
+485,Computer Networks,How to achieve quality of service using leaky bucket aalgorithm. [7+8],215,Routing Algorithms,LOCKED
+486,Computer Networks,a) Explain connection management in transport layer. u,238,Connection Establishment,LOCKED
+487,Computer Networks,Compare and contrast TCP and UDP Protocols. [7+8] g -,241,UDP and RPC,LOCKED
+488,Computer Networks,a) What are the major components in E-mail system? And explain the role of SMTP for sending and receiving messages.,257,Electronic Mail,LOCKED
+490,DBMS,"Part A is compulsory, which carries 25 marks. In Part A, answer all questions.",,,EXCLUDE
+491,DBMS,"In Part B, Answer any one question from each unit. Each question carries 10 marks and may have a, b as sub questions. PART - A (25 Marks)",,,EXCLUDE
+492,DBMS,a) What is a database? [2],338,Database System Applications,LOCKED
+495,DBMS,What is a trigger? [3],366,Triggers and active databases,LOCKED
+500,DBMS,What is an integrity constraint? Discuss various types of integrity constraints for DBMS. [10],350,Integrity constraints over relations,LOCKED
+510,DBMS,Compare tree based indexing with hash based indexing. [10],400,External Storage and Indexing,LOCKED
+511,DBMS,Explain insertion operation on hash file. [5+5] ---ooOoo---,,,EXCLUDE
+512,DBMS,"Part A is compulsory, which carries 25 marks. In Part A, answer all questions. J iii) In Part B, Answer any one question from each unit. Each question carries 10 marks and may have a, b as sub questions. PART - A N (25 Marks) T",,,EXCLUDE
+513,DBMS,Write the purpose of DDL. List any 2 commands of DDL. [3] U,359,SQL Queries,LOCKED
+515,DBMS,Write the purpose of order by in SQL with example. [3] H,363,Aggregation operators,LOCKED
+516,DBMS,What is functional dependency? [2],370,Reasoning about functional dependencies,LOCKED
+520,DBMS,Write about tree structured indexing. [3] e PARTd - B (50 Marks),400,External Storage and Indexing,LOCKED
+523,DBMS,a) Write about Relational model in DBMS.,349,Introduction to the Relational Model,LOCKED
+534,DBMS,Discuss on any two methods of hash based indexing. [10] ---ooOoo---,,,EXCLUDE
+535,DBMS,"Tech II Year II Semester Supplementary Examinations, August/September - 2022 DATABASE MANAGEMENT SYSTEMS T (Common to CSE, IT) U Answer any five questions All questions carry equal marks H ----",,,EXCLUDE
+539,DBMS,Display the students record whose Avg_Marks is greater than 60. (From Student Relation) a,359,SQL Queries,LOCKED
+541,DBMS,Display the Std_Name and Branch from Student Relation,359,SQL Queries,LOCKED
+542,DBMS,Display the Std_Name and Std_Rno sort by aescending order of Avg_Marks.,359,SQL Queries,LOCKED
+543,DBMS,Describe the following terms: r,338,Database System Applications,LOCKED
+547,DBMS,What is a SQL trigger explain with suitable examples? - [7+8],366,Triggers and active databases,LOCKED
+551,DBMS,What is indexing? Explain Hash based indexing and tree based indexing. [7+8] T,400,External Storage and Indexing,LOCKED
+554,DBMS,a) Explain the different types of database end users. Discuss the main activities of each.,338,Database System Applications,LOCKED
+557,DBMS,What is mUeant by multi valued dependency? Explain 4NF with an example. [7+8] s ---ooOoo--- d a r A u g -,,,EXCLUDE
+558,DBMS,a) Describe the database system structure with a neat diagram.,343,Structure of a DBMS,LOCKED
+559,DBMS,How dHoes a query get processed in query processor? Demonstrate with an example. [7+8],338,Database System Applications,LOCKED
+560,DBMS,What is the significance of class hierarchies in ER data model? Give illustrations. [15] U,340,Data Models,LOCKED
+563,DBMS,a) Compare nested query and correlated query. Discuss suitable examples.,362,Nested queries,LOCKED
+564,DBMS,What is a trigger? Why is it needded in DBMS? Explain various types of triggers. [7+8],366,Triggers and active databases,LOCKED
+566,DBMS,Discuss about the performance of locking and intention locks. [15] -,392,Locking systems with several lock modes,LOCKED
+568,DBMS,Briefly discuss write ahead log protocol for recover0y. [8+7],395,Log-based recovery,LOCKED
+569,DBMS,What is an index? Differentiate between sparse and dense indices. [15] - ---ooOoo--- A M,,,EXCLUDE
+570,DBMS,a) Defi ne DBMS. Compare and contrast DBMS with file system.,339,File Systems versus a DBMS,LOCKED
+575,DBMS,Find the part names supplied by suppliers belonging to ‘Vijaz’.,356,Relational algebra,LOCKED
+576,DBMS,Find the names of the suppliers2 who are supplying at least two parts.,356,Relational algebra,LOCKED
+577,DBMS,Find the parts which are supplied by only ‘Mohan’.,356,Relational algebra,LOCKED
+578,DBMS,Find the suppliers who supply every blue part. -,356,Relational algebra,LOCKED
+579,DBMS,Find the suppliers who supply only blue parts. [3+3+3+3+3],356,Relational algebra,LOCKED
+580,DBMS,a) Discuss the group by clause in SQL with illustrations.,363,Aggregation operators,LOCKED
+581,DBMS,What is a nested query? Discuss a correlated nested1 query with examples. [7+8] -,362,Nested queries,LOCKED
+586,DBMS,Explain write-ahead log protocol in detail. [8+7] A,395,Log-based recovery,LOCKED
+593,DBMS,Explain the architecture of Database Management Systems with a neat diagram. [10],343,Structure of a DBMS,LOCKED
+594,DBMS,a) What are the statements in SQL for destroying and altering tables?,355,Destroying/altering tables and views,LOCKED
+595,DBMS,What is a primary key and foreign key? [5+5],350,Integrity constraints over relations,LOCKED
+599,DBMS,Find the Sailor id’s with age over 20 and who have not reserved a red boat.,356,Relational algebra,LOCKED
+600,DBMS,Find the names of Sailors who reserved boat 103,356,Relational algebra,LOCKED
+602,DBMS,a) What are the problems of redundancy? Explain with example.,368,Problems caused by redundancy,LOCKED
+603,DBMS,What is the solution to the problems of redundancy? Explain. [5+5],368,Problems caused by redundancy,LOCKED
+605,DBMS,a) Explain the properties of transactions.,381,Transaction concept,LOCKED
+606,DBMS,What are the concurrent control mechanisms without locking? [5+5],393,Concurrency control by timestamps,LOCKED
+607,DBMS,a) What is ARIES algorithm? Explain.,395,Log-based recovery,LOCKED
+608,DBMS,Explain media recovery. [5+5] www.manaresults.co.in,399,Failure with loss of non-volatile storage,LOCKED
+609,DBMS,Explain Indexed Sequential Access Method. [10],407,ISAM,LOCKED
+611,DBMS,a) How to represent the strong Entity set and Weak entity set in ER-Model? [2],344,Database design and ER diagrams,LOCKED
+612,DBMS,Explain about various integrity constraints in relational model. [3],349,Introduction to the Relational Model,LOCKED
+613,DBMS,What are the SQL statements are used to retrieve and modify the database? [2],359,SQL Queries,LOCKED
+615,DBMS,"σ (r) ii) ∏ ( σ (rXs)) [3] B=25 A,F, C=D",356,Relational algebra,LOCKED
+618,DBMS,Explain Failure with loss of nonvolatile storage. [3],399,Failure with loss of non-volatile storage,LOCKED
+623,DBMS,What are speciality databases? Explain. [5+5],338,Database System Applications,LOCKED
+626,DBMS,a) What is trigger? Explain how to implement triggers in SQL?,366,Triggers and active databases,LOCKED
+627,DBMS,Explain the following Operators in SQL with examples:,361,"UNION, INTERSECT, and EXCEPT",LOCKED
+628,DBMS,SOME ii) IN iii) EXCEPT v) UNION. [5+5],361,"UNION, INTERSECT, and EXCEPT",LOCKED
+629,DBMS,a) What do you mean by scheme refinement? Explain how it can be accomplished?,367,Schema refinement,LOCKED
+631,DBMS,"a) Compute the closure of the following set of functional dependencies for a relation scheme. R(A,B,C,D,E,F,G,H), F={ ABC, BDEF, ADG,AH} List the candidate keys of R.",370,Reasoning about functional dependencies,LOCKED
+633,DBMS,a) What is transaction? Explain the properties of transaction.,381,Transaction concept,LOCKED
+641,DBMS,Find the names of the students not registered in any section,359,SQL Queries,LOCKED
+642,DBMS,Find the names of the instructors not teaching any course,359,SQL Queries,LOCKED
+643,DBMS,Find the total number of courses taught department wise,359,SQL Queries,LOCKED
+644,DBMS,Find the total Wuitber of dciived sMUIar wore [10] S,,,EXCLUDE
+647,DBMS,a) Discuss about DDL. 2],359,SQL Queries,LOCKED
+652,DBMS,Describe the inclusion dependencies. 3],378,Multivalued dependencies,LOCKED
+657,DBMS,Explain the relational database architecture. 0,343,Structure of a DBMS,LOCKED
+658,DBMS,State and explain various features of E-R Models. 0,344,Database design and ER diagrams,LOCKED
+664,DBMS,Discuss about failure with loss of nonvolatile storage. 0,399,Failure with loss of non-volatile storage,LOCKED
+666,DBMS,What are the indexed data structures? Explain any one of them. 0 www. jJntuonline.com --00000--,400,External Storage and Indexing,LOCKED

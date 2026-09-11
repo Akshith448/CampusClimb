@@ -1,0 +1,295 @@
+query,subject,positive_topic,negative_topic,correct_topic_id
+What is a binary semaphore? [2],Operating Systems,Semaphores,Kernel Support for Files,167
+Explain about deadlock detection. [7+8] r,Operating Systems,Deadlock Detection and Recovery,Scheduling Algorithms,164
+Is the system currently deadlocked? Why or why not?,Operating Systems,Deadlock Characterization,Classical Problems of Synchronization,160
+Describe the structure and working of a Simple Batch Operating System. How does it improve CPU util ization?,Operating Systems,Simple Batch Systems,System Components,143
+Illustrate the semaphore functions with examples. 5+5 www. jntuonline.com,Operating Systems,Semaphores,Memory Management Unit (MMU),167
+What is paging in memory management? Describe how logical addresses are translated into physical addresses in paging.,Operating Systems,Logical Versus Physical Address Space,Scheduling Algorithms,176
+Describe about the different types of File allocation methods. [15] A,Operating Systems,File Allocation Methods,Memory Management Unit (MMU),185
+a) What are the criteria for evaluating the CPU scheduling algorithm? A,Operating Systems,Scheduling Algorithms,File System Interface and Access Methods,157
+a) Explain about the distributed operating1 system in brief.,Operating Systems,Distributed Systems,Multi-programmed Systems,148
+What are the requirements of Critical section problem? [3] E,Operating Systems,Critical Section Problem,Directory Structure,165
+What are system calls in an operating system?,Operating Systems,Operating System Services,Parallel Systems,151
+"What is a monitor? Explain how dinning philosopher’s problem is solved using monitors with example pseudo code. [10] Explain the common techniques for structuring the page table. [10] Consider a swap ing system in which memory consists of the following hole sizes in memory order: KB, 4 KB, 20 KB, 18 KB, 7 KB, 9 KB, 12 KB, and [5 KB. Which ole is taken for successive segment requests of: (i) 12 KB (ii) 10 KB (iii) 9 KB for first fit, best fit, worst fit, and next fit approaches. Explain briefly about LFU Page replacement algorithm. [5+5] Explain the following with relevant diagrams:",Operating Systems,Virtual Address Space,Classical Problems of Synchronization,178
+What is Demand Paging? [2],Operating Systems,Virtual Address Space,File Allocation Methods,178
+Discuss the indexed file allocation method with an example. [5+5] N,Operating Systems,File Allocation Methods,Memory Management Unit (MMU),185
+a) Describe basic method of segmentation. u,Operating Systems,Logical Versus Physical Address Space,Memory Management Unit (MMU),176
+a) Explain different categories of system calls with sui5table example.,Operating Systems,Operating System Services,Logical Versus Physical Address Space,151
+What is Semaphore? How can we achieve the synchronization 0using semaphore for producer consumer problem? [5+5] OR 1,Operating Systems,Semaphores,Deadlock Prevention,167
+Write down the services provided by an operating systems with respect to device management. [5+5],Operating Systems,System Calls for File I/O Operations,Multiple-Processor Scheduling,187
+Describe the logical and physical structure of a file system. How are files organized on secondary stor age? ---ooOoo---,Operating Systems,File System Structure,Threads,184
+Can we ensure the same degree of security in a time-shared machine as in a dedicated machine? Explain your answer. [5+5] OR 0,Operating Systems,Time-shared Systems,File Allocation Methods,145
+Why do processes need to communicate? [2],Operating Systems,Cooperating Processes,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,154
+a) What is operating system? Explain multiprogramming and time sharing systems.,Operating Systems,Multi-programmed Systems,Deadlock Avoidance,144
+What are the different file allocation methods?,Operating Systems,File Allocation Methods,Scheduling Algorithms,185
+"Simulate FIFO, LRU and optimal page replacement algorithms on the following reference string and find number of page faults(number of frames = 4) 1,2,3,2,1,2,3,4,5,6,7,3,4,5,6,3 [10]",Operating Systems,Virtual Address Space,Multiple-Processor Scheduling,178
+Explain how to eliminate the deadlocks using resource preemption. [3] PART-B (50 Marks),Operating Systems,Deadlock Characterization,Classical Problems of Synchronization,160
+Distinguish between the client–server and peer-to-peer models of distributed systems. [5+5],Operating Systems,Distributed Systems,Operating System Services,148
+a) How file protection is achieved by operating system?,Operating Systems,File Protection,File Allocation Methods,183
+a) Summarize the evolution of Operating system in detail.,Operating Systems,Operating System Introduction,File System Structure,142
+"What is the average waiting time and average turn around times of all processes for FCFS, SJF algorithm? [5+5] A Precesses Burst Time Priority P1 10 3 P2 1 1 M P3 2 3 P4 1 4 P5 5 2",Operating Systems,Scheduling Algorithms,Deadlock Prevention,157
+"a) In a multiprogramming and time-sharing environment, several users share the system s simultaneously. This situation can result in various security problems. What are two such problems?",Operating Systems,Multi-programmed Systems,IPC Between Processes on Different Systems,144
+Explain the preemptive and non-preemptive scheduling criteria. [5+5],Operating Systems,Scheduling Criteria,Deadlock Avoidance,156
+a) Explain contiguous and linked file allocation methods.,Operating Systems,File Allocation Methods,Personal Computer Systems,185
+a) Distinguish between logical verses physical address space.,Operating Systems,Logical Versus Physical Address Space,Operating System Introduction,176
+a) Describe Round Robin scheduling aalgorithm with example.,Operating Systems,Scheduling Algorithms,IPC Between Processes on Different Systems,157
+Explain the concept of Least Recently Used memory page replacement method and how it is different from sFirst In First Out (FIFO) page replacement method. [10] e,Operating Systems,Virtual Address Space,Directory Structure,178
+Compare internal and external fragmentation. [2] D,Operating Systems,Logical Versus Physical Address Space,Memory Management Unit (MMU),176
+"a) Suppose that a disk drive has 5000 cylinders numbered 0 to 4999. The drive is currently E serving a request at cylinder 143. The queue of pending requests in FIFO order 86,1470,913,1774,948,1509, 1022, 1750, 130 starting from current head position. What is the total distance that disk aDrm moves to satisfy all the pending request for FCFS and SSTF disk scheduling algorithm.",Operating Systems,Virtual Address Space,Distributed Systems,178
+a) ExplaiUn about time-sharing operating systems.,Operating Systems,Time-shared Systems,Parallel Systems,145
+What are the main criteria used to evaluate CPU scheduling algorithms?,Operating Systems,Scheduling Algorithms,Address Binding at Compile Time and Load Time,157
+Explain about shortest Job First Scheduling algorithm with an example. [7+8] p,Operating Systems,Scheduling Algorithms,Threads,157
+How DNS service maps domain names to IP addresses. [8+7] - ---ooOoo--- - P M,Computer Networks,IP Addresses,Client Server Model,229
+Explain Tunneling in Internet layer. [5+5] s,Computer Networks,Tunneling,Congestion Control Algorithms,224
+What is channel allocation problem?,Computer Networks,Multi Access Protocols,Ethernet MAC Sublayer,201
+a) Write about CSMA and CSMA/CD in detail.,Computer Networks,CSMA,DHCP,203
+What is CIDR addressing 1 [2],Computer Networks,IP Addresses,Data Link Layer Design Issues,229
+Explain about GBN Sliding Window Protocol. 5+5,Computer Networks,Sliding Window Protocol,Hierarchical Routing,200
+What is packet fragmentation? [5+5],Computer Networks,Packet Fragmentation,Addressing,226
+Discuss the design issues of data link layer. [3],Computer Networks,Data Link Layer Design Issues,Packet Fragmentation,197
+What is framing? ExplainP various framing techniques of Data Link Layer. [15],Computer Networks,Data Link Layer Design Issues,Spanning Tree Bridges,197
+a) Define Routing. Explain Distance Vector Routing Algorithm with an example. e,Computer Networks,Distance Vector Routing,TCP Connection Establishment,219
+Mention the differences between IPv4 and IPv6. [3] -,Computer Networks,IP Addresses,DNS,229
+a) Explain about hierarchical routing algorithm. S,Computer Networks,Hierarchical Routing,IPv6 Protocol,221
+Describe DNS with diagrams and real-time examples. [10] a ---ooOoo--- e r,Computer Networks,DNS,FTP,259
+Discuss about HTTP request and response mechanisms. [8+7] ---ooOoo---,Computer Networks,HTTP,Protocol Layering Scenario,255
+Compare and contrast OSI and TCP/IP reference models. Critique on each model. [10] OR 2,Computer Networks,Comparison of OSI and TCP/IP Reference Model,SSH,194
+a) Explain sliding window protocol.,Computer Networks,Sliding Window Protocol,IPv6 Protocol,200
+Discuss about Carrier Sense Multiple Access (CSMA) protocols in brief. [5+5],Computer Networks,CSMA,ALOHA,203
+a) Explain the IPV4 header.,Computer Networks,IP Addresses,Ethernet MAC Sublayer,229
+Define congestion. Write about congestion Scontrol policies. [7+8],Computer Networks,Congestion Control Algorithms,Admission Control,222
+Summarize the functions performed by DNS.,Computer Networks,DNS,CSMA,259
+What are the approaches to appl0y on the congestion control? [3],Computer Networks,Congestion Control Algorithms,ALOHA,222
+Explain the general principles of congestion control algorithms. [5+5],Computer Networks,Congestion Control Algorithms,SSH,222
+"a) Describe the message format, message transfer and the underlying protocol involved in the working of the electronic mail.",Computer Networks,Electronic Mail,Use of Bridges,257
+a) Describe the multicast routing in detail.,Computer Networks,Routing Algorithms,Tunneling,215
+a) | Compare and contrast the OSI and TCP/IP reference models.,Computer Networks,Comparison of OSI and TCP/IP Reference Model,Packet Fragmentation,194
+Describe sliding window protocol using selective repeat mechanism.,Computer Networks,Sliding Window Protocol,Optimality Principle,200
+Explain various data models. [5+5] a,DBMS,Data Models,Transaction state,340
+What is Boyce code normal form? Explain with a suitable example. [8+7] J,DBMS,First normal form,NULL values,374
+Give an overview of database architecture. [10],DBMS,Introduction to views,Closure of a set of functional dependencies,354
+Describe multi valued dependencies and the normal form associated with it. [15],DBMS,First normal form,Clustered Files,374
+How does DBMS provide data abstraction? Explain with a neat diagram. [7+8] U,DBMS,Levels of abstraction in a DBMS,Heap Files,341
+Explain the need of schema refinement in database design with suitable examples. [10],DBMS,Database design and ER diagrams,Armstrong's axioms,344
+"a) Consider the following relations Student (Std_Name,Std_Rdno,Avg_Marks,Branch) Fees (Std_Rno,Fee_Paid,Fee_D ue) Represent the following using relational algebra.",DBMS,Relational algebra,Database design and ER diagrams,356
+a) Discuss about class hierarchies and constraints on them in ER Model.,DBMS,Database design and ER diagrams,Integrity constraints over relations,344
+Give example for spurious tuples. [3],DBMS,Problems caused by redundancy,Concurrency control by timestamps,368
+a) Describe the problems related to decomposition.,DBMS,Decompositions and associated problems,First normal form,369
+What is meant by concurrency control? 0,DBMS,Concurrency control by timestamps,Structure of a DBMS,393
+"update When a transaction is rolled back under timestamp ordering, it is assigned a new timestamp. Why can it not simply keep its old timestamp? Give a brief note on Indexed Sequential Access Methods. Make a comparison between the primary index and a secondary index. Where does a DBMS store persistent data? How does it bring data int 545] oO main memory for processing? What DBMS component reads and writes data from main memory, and what is the unit of I/O? ---00000--- www.jntuonline.com",DBMS,Primary Index,Database System Applications,404
+"a) What is meant by nested queries, explain with suitable example.",DBMS,Nested queries,Transaction concept,362
+Demonstrate the working of validation based protocol. [10],DBMS,Validation,Introduction to views,394
+Domain relational calculus. [8+7] u,DBMS,Domain relational calculus,Closure of a set of functional dependencies,358
+"a) Write the advantages and disadvantages of normalization. Explain first no2rmal form with a suitable example. Check whether the following Student relation is in first normal form or not, if not convert into First normal Form. Name Rno Address Mobile Nos Sam 12 Texas, 9XXXXXXX 2 USA 8XXXXXXX Alice 14 Chicago, 7XXXXXXX USA 6XXXXXXX",DBMS,First normal form,Domain relational calculus,374
+a) List the applications of DBMS. p,DBMS,Database System Applications,Log-based recovery,338
+Define Multi valued dependencies and join dependency. [3],DBMS,Relational algebra,Static Hashing,356
+Draw an ER diagram for banking system taking into account at least four entities and s use appropriate keys and constraints. [7+8],DBMS,Database design and ER diagrams,Concurrency control by timestamps,344
+What is an unsafe query? [2],DBMS,Tuple relational calculus,Extendible Hashing,357
+Explain tuple relational calculus. [6+4],DBMS,Tuple relational calculus,File Systems versus a DBMS,357
+Discuss about domain relational calculus. 0,DBMS,Domain relational calculus,Database design,358
+What aggregate operators does SQL support? Explain with examples. [5+5],DBMS,Aggregation operators,Additional features of the ER model,363
+Write the applications of DBMS. [3],DBMS,Database System Applications,Domain relational calculus,338
+Differentiate between tuple relational calculus with domain relational calculus. [7+8] e,DBMS,Tuple relational calculus,B+ Trees,357
+What is meant by functional dependencies? Discuss about second normal form. 0,DBMS,Second normal form,Data independence,375
+Write a note on views. p [5+5],DBMS,Introduction to views,Concurrent executions,354
+What is meant by buffer management? 2],DBMS,Buffer management,Static Hashing,398
+a) What is deferred update recovery technique and how it used in database recovery? N,DBMS,Log-based recovery,Relational algebra,395
+a) Write the aggregate operators in SQL.,DBMS,Aggregation operators,Validation,363
+a) Explain about the set comparison operators used in SQL queries weith example.,DBMS,SQL Queries,Introduction to views,359
+What is resource allocation graph? Why it is used? [3],Operating Systems,Deadlocks System Model,Multi-programmed Systems,159
+a) What is a process? Distinguish between a process and a program.,Operating Systems,Process Concepts and Scheduling,Deadlock Prevention,152
+What is a file? [2] a,Operating Systems,File System Interface and Access Methods,Critical Section Problem,181
+a) Under what circumstances would a user be better off using a timesharing system rather than a PC or single-user workstation.,Operating Systems,Time-shared Systems,Multi-programmed Systems,145
+"a) Describe the differences among short-term, medium-term, and long-term scheduling.",Operating Systems,Scheduling Criteria,Critical Section Problem,156
+Why is it important for the scheduler to distinguish I/O-bound programs from CPU- bound programs? [5+5],Operating Systems,Scheduling Criteria,Threads,156
+Discuss the tradeoff between fairness and throughput of operations in the readers- Twriters problem. Propose a method for solving the readers-writers problem without causing starvation. [10],Operating Systems,Classical Problems of Synchronization,Kernel Support for Files,168
+"Given five memory partitions of 100 KB, 500 KB, 200 KB, 300 KB, and 600 KB (in order), how would each of the first-fit, best-fit, and worst-fit algorithms place processes H of 212 KB, 417 KB, 112 KB, and 426 KB (in order)? Which algorithm makes the most efficient use of memory? [10]",Operating Systems,Logical Versus Physical Address Space,Scheduling Algorithms,176
+a) What are the advantages of Contiguous allocation? What are the drawbacks of contiguous allocation of disk space? d,Operating Systems,Logical Versus Physical Address Space,File Allocation Methods,176
+"Explain the following commands: lseek, stat, ioctl. [4+6]",Operating Systems,System Calls for File I/O Operations,Distributed Systems,187
+a) Discuss about Process Control Block with a neat diagram.,Operating Systems,Process Concepts and Scheduling,Critical Section Problem,152
+a) Discuss about resuming processes within a Monitor. e,Operating Systems,Monitors,Virtual Address Space,170
+a) WUhat are the various components of operating system structure and explain with a neat sketch.,Operating Systems,Operating System Introduction,Critical Regions,142
+a) What are the various objectives and functions of operating systems?,Operating Systems,Operating System Introduction,Directory Structure,142
+a) Explain about the implementation of Access Matrix.,Operating Systems,File Protection,Operating System Services,183
+a) Define OperaSting systems. List the objectives of Operating System. [2],Operating Systems,Operating System Introduction,Multiple-Processor Scheduling,142
+Illustrate about device controller and drivers. [3],Operating Systems,System Components,Operations on Processes,150
+"Explain first, best fit memory al location techniques. [3]",Operating Systems,Logical Versus Physical Address Space,Operations on Processes,176
+Define the terms seek time and rotational latency. [2],Operating Systems,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,Classical Problems of Synchronization,188
+What are the various file accessing1 methods? [3],Operating Systems,File System Interface and Access Methods,Simple Batch Systems,181
+What are the functionalities of Operating Systems? Expla-in in detail. [5+5],Operating Systems,Operating System Introduction,Cooperating Processes,142
+What are the various components of Operating System structure? And explain simple layered approach of Operating System in detail. [5+5],Operating Systems,Operating System Introduction,Deadlock Detection and Recovery,142
+With a neat sketch explain process state diagram. 9 [5+5],Operating Systems,Process Concepts and Scheduling,Critical Regions,152
+What are the disadvantages of single contiguous memory allocation? Explain. [5+5],Operating Systems,Logical Versus Physical Address Space,File Allocation Methods,176
+a) Compare and Contrast Free space management and Swap space management. J,Operating Systems,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,Scheduling Algorithms,188
+a) Discuss various types of Disk storage attachments.,Operating Systems,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,Deadlocks System Model,188
+What are the objectives of file management system? Explain file system architecture. T [5+5],Operating Systems,File System Structure,Process Concepts and Scheduling,184
+a) Explain the functions of operating system. [2],Operating Systems,Operating System Introduction,System Calls for File I/O Operations,142
+Explain about the abstract view of the components of a computer system. [3] S,Operating Systems,Operating System Introduction,Real-Time Systems,142
+Distinguish between I/O bound process and CPU bound process. [2],Operating Systems,Scheduling Criteria,Semaphores,156
+Explain about the Acyclic graDph directory. [2],Operating Systems,Directory Structure,Multi-programmed Systems,182
+Explain about the Solid state disk. [3],Operating Systems,Disk Scheduling Algorithms FCFS SSTF SCAN C-SCAN,IPC Between Processes on Different Systems,188
+What is Access Control? [2],Operating Systems,File Protection,Scheduling Criteria,183
+Explain how operating systems are used in a variet1y of computing environments. [10],Operating Systems,Operating System Introduction,Threads,142
+Explain about the dual mode operation in OS with a neat block diagram. [5+5],Operating Systems,Operating System Introduction,IPC Between Processes on Different Systems,142
+a) Explain about the Process Control Block.,Operating Systems,Process Concepts and Scheduling,Critical Section Problem,152
+a) Explain about the Language based Protection.,Operating Systems,File Protection,Methods for Handling Deadlocks,183
+a) Explain the protection mechanism illustrating the use of protection domain and access control list.,Operating Systems,File Protection,Scheduling Criteria,183
+a) Describe about control card in batch-system. [2],Operating Systems,Simple Batch Systems,Scheduling Algorithms,143
+What do you turn around Time? [2],Operating Systems,Scheduling Criteria,Simple Batch Systems,156
+Define Process Control Block. [3],Operating Systems,Process Concepts and Scheduling,File Allocation Methods,152
+Describe about resource allocation Graph. [2],Operating Systems,Deadlocks System Model,Cooperating Processes,159
+a) Define operating system? Elaborate the operating system operations with examples?,Operating Systems,Operating System Introduction,Classical Problems of Synchronization,142
+Discuss in detail the main advantage of the layered approach to system design? What are the disadvantages of using layered approach? 5+5,Operating Systems,Operating System Introduction,Deadlock Detection and Recovery,142
+Explain the following terms with examples and neat diagrams: 5+5,Operating Systems,Operating System Services,Deadlock Characterization,151
+Java Virtual Machine b) Para-Virtualization,Operating Systems,Operating System Introduction,Parallel Systems,142
+"a) Differentiate between Long terms, Short term, Medium term Scheduler.",Operating Systems,Scheduling Criteria,Deadlock Characterization,156
+What is the content of the matrix Need?,Operating Systems,Deadlock Avoidance,Critical Section Problem,163
+Is the system in a safe state? Why?,Operating Systems,Deadlock Avoidance,File System Structure,163
+a) What is Coaxial Cable?,Computer Networks,Physical Layer Guided Transmission Media,HTTP,195
+What is process to process delivery?,Computer Networks,Transport Layer Services to Upper Layers,UDP and RPC,235
+Explain fiber optic communication in detail.,Computer Networks,Physical Layer Guided Transmission Media,TELNET,195
+a) Explain the design issues in network layer.,Computer Networks,Data Link Layer Switching,ARP,207
+Discuss about network layer in the Internet.,Computer Networks,Data Link Layer Switching,The OSI Model,207
+a) Describe the functionalities of transport layer.,Computer Networks,Transport Layer Services to Upper Layers,CSMA,235
+Give a brief note on connection management at transport layer.,Computer Networks,Connection Establishment,Congestion Control Algorithms,238
+"a) With a neat architecture, explain TCP in detail.",Computer Networks,Introduction to TCP,"Repeaters, Hubs, Bridges, Switches, Routers and Gateways",243
+Enumerate the differences between TCP and UDP.,Computer Networks,UDP and RPC,Congestion Control Algorithms,241
+a) What is a computer npetwork? Explain. [2],Computer Networks,Overview of the Internet,Comparison of OSI and TCP/IP Reference Model,189
+Write the properties of fiber optics. [3],Computer Networks,Physical Layer Guided Transmission Media,CSMA,195
+What is framing in data linek layer? Explain. [2],Computer Networks,Elementary Data Link Layer Protocols,TCP Segment Header,199
+What is the function of network layer in the Internet? [3],Computer Networks,Overview of the Internet,DHCP,189
+What are the elements of a Transport protocol? [2],Computer Networks,Elements of Transport Protocol,IP Addresses,236
+How does UDP differ from TCP? List the applications of UDP. [3],Computer Networks,UDP and RPC,TCP Segment Header,241
+What is World Wide Web (WWW)? M [2],Computer Networks,HTTP,Client Server Model,255
+"With a neat diagram, explain ARPANET design. - [5+5]",Computer Networks,Overview of the Internet,Collision Free Protocols,189
+a) Discuss in detail about various network software and hardware.,Computer Networks,Overview of the Internet,Connection Release,189
+Explain about various transmission media used in physical layer with a neat sketch. [5+5],Computer Networks,Physical Layer Guided Transmission Media,Connectionless and Connection Oriented Networks,195
+a) What are the various types of error detection methods? Discuss.,Computer Networks,CRC Codes,Congestion Control Algorithms,198
+How a connection is established in a Transport Protocol. Explain three protocol scenarios for establishing a connection. [10],Computer Networks,Connection Establishment,Comparison of OSI and TCP/IP Reference Model,238
+a) What are the services provided by transport layer to the upper layers? Explain. Ub) Write the structure of TCP pseudo header and explain how it is used in checksum calculation. [5+5],Computer Networks,Transport Layer Services to Upper Layers,TCP Segment Header,235
+Describe the typical elements in an audio streaming architecture. [5+5] d,Computer Networks,Real Time Transport Protocols,Overview of the Internet,242
+a) | Write the advantages of optical fiber over twisted-pair and coaxial cables. [2],Computer Networks,Physical Layer Guided Transmission Media,FTP,195
+What are the advantages of having layered architecture? [3],Computer Networks,Protocol Layering Scenario,TELNET,190
+Briefly explain the difference between switch and router. [2],Computer Networks,Ethernet MAC Sublayer,Routing Algorithms,206
+Sketch the Manchester encoding for the bit stream: 0001110101. [3],Computer Networks,CRC Codes,Elements of Transport Protocol,198
+Differences between CO and CL. [3],Computer Networks,Transport Layer Services to Upper Layers,TCP Segment Header,235
+What are the functions of ICMP? [3],Computer Networks,ICMP,Data Link Layer Design Issues,231
+What is the architecture of WWW? [2],Computer Networks,HTTP,ICMP,255
+a) Discuss about the various transmission media available at the physical layer.,Computer Networks,Physical Layer Guided Transmission Media,CIDR,195
+a) Explain the differences between the switching methods.,Computer Networks,Ethernet MAC Sublayer,Collision Free Protocols,206
+a) Illustrate the frame structure of IEEE 802.3.,Computer Networks,Collision Free Protocols,IPv6 Protocol,204
+a) What is ARPANEUT? [2],Computer Networks,Overview of the Internet,Client Server Model,189
+Write about Co-axial cable transmission media? [3] s,Computer Networks,Physical Layer Guided Transmission Media,IP Addresses,195
+What are the advantages of seliding window protocol? [3],Computer Networks,Sliding Window Protocol,Real Time Transport Protocols,200
+What is the function of transport layer? [2],Computer Networks,Transport Layer Services to Upper Layers,CIDR,235
+What is UDP? [3] p,Computer Networks,UDP and RPC,Crash Recovery,241
+What is the function of application layer? [2],Computer Networks,Application Layer Introduction,Packet Fragmentation,252
+Explain about fiber optics transmission media. [10],Computer Networks,Physical Layer Guided Transmission Media,SSH,195
+Explain the stop-and-wait protocol. [10],Computer Networks,Elementary Data Link Layer Protocols,Ethernet MAC Sublayer,199
+Explain about wireless LAN. [10],Computer Networks,Ethernet Physical Layer,Connectionless and Connection Oriented Networks,205
+Explain the elements of transport layer. [10],Computer Networks,Elements of Transport Protocol,Introduction to TCP,236
+Explain the TCP transmission policy. [10],Computer Networks,Introduction to TCP,Addressing,243
+a) What is Internet. Daifferentiate it from intranet. [2],Computer Networks,Overview of the Internet,Network Layer Design Issues,189
+When do we use hubs? p [2],Computer Networks,Ethernet MAC Sublayer,IPv6 Protocol,206
+What are main functionalities of routers? What is purpose of using multiprotocol e routers? [3] r,Computer Networks,Ethernet MAC Sublayer,UDP and RPC,206
+Discuss the principles of internetworking. [3],Computer Networks,Optimality Principle,SSH,216
+What is silly window syndrome? 0 [2],Computer Networks,TCP Sliding Window,Overview of the Internet,249
+Describe go back N protocol. [5+5],Computer Networks,Sliding Window Protocol,IPv6 Protocol,200
+Explain the design issues of network layer. [5+5],Computer Networks,Data Link Layer Switching,Packet Fragmentation,207
+Given a network address of 192.168.100.0 and a subnet mask of 255.255.255.192.,Computer Networks,IP Addresses,Routing Algorithms,229
+How many subnets are created?,Computer Networks,IP Addresses,TCP Segment Header,229
+How many hosts are there per subnet? [5+5] u9.a) Discuss ICMP Messages.,Computer Networks,IP Addresses,ICMP,229
+"Ilelustrate the TCP connections, TCP releases with state transition diagram. [10] d",Computer Networks,TCP Connection Management Modeling,TCP Sliding Window,248
+a) What are the advantages of layered protocol suites? [2],Computer Networks,Protocol Layering Scenario,TCP Connection Establishment,190
+Mention the comparison of fiber optics and copper wire. [3] e,Computer Networks,Physical Layer Guided Transmission Media,TCP Connection Establishment,195
+Write about P-Persistent CSM A. [3],Computer Networks,CSMA,Shortest Path Routing,203
+Write short note on design issues of network layer. [2],Computer Networks,Data Link Layer Switching,HTTP,207
+Explain the Hamming Code with an example. [4+6],Computer Networks,CRC Codes,TCP Congestion Control,198
+Describe about flow Control and buffering in transport layer. [10],Computer Networks,Transport Layer Services to Upper Layers,Spanning Tree Bridges,235
+Write in detail about the Internet control message protocol. [10] u s10. How does the Remote procedure call works? Explain it. [10] 11e. Write short notes on the following:,Computer Networks,ICMP,Elementary Data Link Layer Protocols,231
+Discuss about Internet standards. [8+7] P,Computer Networks,Overview of the Internet,Packet Fragmentation,189
+a) Describe the Transmission Media. What are the types of Transmission Media? a,Computer Networks,Physical Layer Guided Transmission Media,HTTP,195
+"What are the distinct characteristics of local area networks, explain briefly? [7+8] p",Computer Networks,Overview of the Internet,ARP,189
+Define Bridge. Explain the different types of Bridges. [8+7] T,Computer Networks,Ethernet MAC Sublayer,Sliding Window Protocol,206
+a) Illustrate design issues of Network layer. C,Computer Networks,Data Link Layer Switching,Count to Infinity Problem,207
+Write a detailed note on transport services. [8+7],Computer Networks,Transport Layer Services to Upper Layers,IPv6 Protocol,235
+a) WhaDt are the advantages of computer networks?,Computer Networks,Overview of the Internet,Flooding,189
+a) Write about twisted pair cables and coaxial cables with neat diagram. A,Computer Networks,Physical Layer Guided Transmission Media,Routing Algorithms,195
+Draw and explain Internet architecture with a neat sketch. [8+7],Computer Networks,Overview of the Internet,Use of Bridges,189
+Explain about simplex stop and wait protocol for noisy channel. [8+7] R,Computer Networks,Elementary Data Link Layer Protocols,The OSI Model,199
+a) What are the design issues of Network Layer? Explain in detail.,Computer Networks,Data Link Layer Switching,Comparison of OSI and TCP/IP Reference Model,207
+Differentiate between broadcasting and multicasting. [7+8] E,Computer Networks,Store and Forward Packet Switching,Hierarchical Routing,213
+a) Discuss about the performance issues in Transport Layer.,Computer Networks,Transport Layer Services to Upper Layers,TCP Congestion Control,235
+Explain each field in TCP header with neat diagram. [7+8] P -,Computer Networks,Introduction to TCP,CRC Codes,243
+a) What ius the importance of layered architecture in network models? Discuss in detail.,Computer Networks,Overview of the Internet,TCP Connection Management Modeling,189
+a) Discuss about Network hardware components in detail. e,Computer Networks,Overview of the Internet,Introduction to TCP,189
+What are the advantages of fiber optic cables? Explain with a neat sketch. [7+8] d,Computer Networks,Physical Layer Guided Transmission Media,Connectionless and Connection Oriented Networks,195
+How to achieve quality of service using leaky bucket aalgorithm. [7+8],Computer Networks,Routing Algorithms,Connection Release,215
+a) Explain connection management in transport layer. u,Computer Networks,Connection Establishment,Application Layer Paradigms,238
+Compare and contrast TCP and UDP Protocols. [7+8] g -,Computer Networks,UDP and RPC,Crash Recovery,241
+a) What are the major components in E-mail system? And explain the role of SMTP for sending and receiving messages.,Computer Networks,Electronic Mail,Count to Infinity Problem,257
+a) What is a database? [2],DBMS,Database System Applications,Tuple relational calculus,338
+What is a trigger? [3],DBMS,Triggers and active databases,Database System Applications,366
+What is an integrity constraint? Discuss various types of integrity constraints for DBMS. [10],DBMS,Integrity constraints over relations,Database design,350
+Compare tree based indexing with hash based indexing. [10],DBMS,External Storage and Indexing,Locking systems with several lock modes,400
+Write the purpose of DDL. List any 2 commands of DDL. [3] U,DBMS,SQL Queries,Schema refinement,359
+Write the purpose of order by in SQL with example. [3] H,DBMS,Aggregation operators,Form of basic SQL query,363
+What is functional dependency? [2],DBMS,Reasoning about functional dependencies,Secondary Index,370
+Write about tree structured indexing. [3] e PARTd - B (50 Marks),DBMS,External Storage and Indexing,Checkpoints,400
+a) Write about Relational model in DBMS.,DBMS,Introduction to the Relational Model,Database design and ER diagrams,349
+Display the students record whose Avg_Marks is greater than 60. (From Student Relation) a,DBMS,SQL Queries,Extendible Hashing,359
+Display the Std_Name and Branch from Student Relation,DBMS,SQL Queries,Reasoning about functional dependencies,359
+Display the Std_Name and Std_Rno sort by aescending order of Avg_Marks.,DBMS,SQL Queries,Logical database design,359
+Describe the following terms: r,DBMS,Database System Applications,Checkpoints,338
+What is a SQL trigger explain with suitable examples? - [7+8],DBMS,Triggers and active databases,Destroying/altering tables and views,366
+What is indexing? Explain Hash based indexing and tree based indexing. [7+8] T,DBMS,External Storage and Indexing,Checkpoints,400
+a) Explain the different types of database end users. Discuss the main activities of each.,DBMS,Database System Applications,Cluster Index,338
+a) Describe the database system structure with a neat diagram.,DBMS,Structure of a DBMS,Extendible Hashing,343
+How dHoes a query get processed in query processor? Demonstrate with an example. [7+8],DBMS,Database System Applications,Fourth normal form,338
+What is the significance of class hierarchies in ER data model? Give illustrations. [15] U,DBMS,Data Models,Log-based recovery,340
+a) Compare nested query and correlated query. Discuss suitable examples.,DBMS,Nested queries,Clustered Files,362
+What is a trigger? Why is it needded in DBMS? Explain various types of triggers. [7+8],DBMS,Triggers and active databases,Concurrency control by timestamps,366
+Discuss about the performance of locking and intention locks. [15] -,DBMS,Locking systems with several lock modes,Static Hashing,392
+Briefly discuss write ahead log protocol for recover0y. [8+7],DBMS,Log-based recovery,Recovery with concurrent transactions,395
+a) Defi ne DBMS. Compare and contrast DBMS with file system.,DBMS,File Systems versus a DBMS,SQL Queries,339
+Find the part names supplied by suppliers belonging to ‘Vijaz’.,DBMS,Relational algebra,Failure with loss of non-volatile storage,356
+Find the names of the suppliers2 who are supplying at least two parts.,DBMS,Relational algebra,Recovery with concurrent transactions,356
+Find the parts which are supplied by only ‘Mohan’.,DBMS,Relational algebra,Closure of a set of functional dependencies,356
+Find the suppliers who supply every blue part. -,DBMS,Relational algebra,Reasoning about functional dependencies,356
+Find the suppliers who supply only blue parts. [3+3+3+3+3],DBMS,Relational algebra,First normal form,356
+a) Discuss the group by clause in SQL with illustrations.,DBMS,Aggregation operators,Secondary Index,363
+What is a nested query? Discuss a correlated nested1 query with examples. [7+8] -,DBMS,Nested queries,Heap Files,362
+Explain write-ahead log protocol in detail. [8+7] A,DBMS,Log-based recovery,Problems caused by redundancy,395
+Explain the architecture of Database Management Systems with a neat diagram. [10],DBMS,Structure of a DBMS,First normal form,343
+a) What are the statements in SQL for destroying and altering tables?,DBMS,Destroying/altering tables and views,Log-based recovery,355
+What is a primary key and foreign key? [5+5],DBMS,Integrity constraints over relations,Additional features of the ER model,350
+Find the Sailor id’s with age over 20 and who have not reserved a red boat.,DBMS,Relational algebra,Second normal form,356
+Find the names of Sailors who reserved boat 103,DBMS,Relational algebra,Decompositions and associated problems,356
+a) What are the problems of redundancy? Explain with example.,DBMS,Problems caused by redundancy,Minimal covers,368
+What is the solution to the problems of redundancy? Explain. [5+5],DBMS,Problems caused by redundancy,Transaction concept,368
+a) Explain the properties of transactions.,DBMS,Transaction concept,Multivalued dependencies,381
+What are the concurrent control mechanisms without locking? [5+5],DBMS,Concurrency control by timestamps,B+ Trees,393
+a) What is ARIES algorithm? Explain.,DBMS,Log-based recovery,Conceptual design with the ER model,395
+Explain media recovery. [5+5] www.manaresults.co.in,DBMS,Failure with loss of non-volatile storage,Destroying/altering tables and views,399
+Explain Indexed Sequential Access Method. [10],DBMS,ISAM,Tuple relational calculus,407
+a) How to represent the strong Entity set and Weak entity set in ER-Model? [2],DBMS,Database design and ER diagrams,Problems caused by redundancy,344
+Explain about various integrity constraints in relational model. [3],DBMS,Introduction to the Relational Model,Recoverability,349
+What are the SQL statements are used to retrieve and modify the database? [2],DBMS,SQL Queries,Tuple relational calculus,359
+"σ (r) ii) ∏ ( σ (rXs)) [3] B=25 A,F, C=D",DBMS,Relational algebra,Triggers and active databases,356
+Explain Failure with loss of nonvolatile storage. [3],DBMS,Failure with loss of non-volatile storage,Relationships and Relationship sets,399
+What are speciality databases? Explain. [5+5],DBMS,Database System Applications,Locking systems with several lock modes,338
+a) What is trigger? Explain how to implement triggers in SQL?,DBMS,Triggers and active databases,Serializability by locks,366
+Explain the following Operators in SQL with examples:,DBMS,"UNION, INTERSECT, and EXCEPT",Transaction concept,361
+SOME ii) IN iii) EXCEPT v) UNION. [5+5],DBMS,"UNION, INTERSECT, and EXCEPT",B+ Trees,361
+a) What do you mean by scheme refinement? Explain how it can be accomplished?,DBMS,Schema refinement,Buffer management,367
+"a) Compute the closure of the following set of functional dependencies for a relation scheme. R(A,B,C,D,E,F,G,H), F={ ABC, BDEF, ADG,AH} List the candidate keys of R.",DBMS,Reasoning about functional dependencies,Locking systems with several lock modes,370
+a) What is transaction? Explain the properties of transaction.,DBMS,Transaction concept,"Entities, Attributes, and Entity sets",381
+Find the names of the students not registered in any section,DBMS,SQL Queries,Complex integrity constraints in SQL,359
+Find the names of the instructors not teaching any course,DBMS,SQL Queries,Locking systems with several lock modes,359
+Find the total number of courses taught department wise,DBMS,SQL Queries,Recoverability,359
+a) Discuss about DDL. 2],DBMS,SQL Queries,Data Models,359
+Describe the inclusion dependencies. 3],DBMS,Multivalued dependencies,Serializability,378
+Explain the relational database architecture. 0,DBMS,Structure of a DBMS,External Storage and Indexing,343
+State and explain various features of E-R Models. 0,DBMS,Database design and ER diagrams,Database System Applications,344
+Discuss about failure with loss of nonvolatile storage. 0,DBMS,Failure with loss of non-volatile storage,System log,399
+What are the indexed data structures? Explain any one of them. 0 www. jJntuonline.com --00000--,DBMS,External Storage and Indexing,Third normal form,400

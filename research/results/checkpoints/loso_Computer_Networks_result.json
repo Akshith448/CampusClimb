@@ -1,0 +1,12 @@
+{
+  "Target Subject": "Computer Networks",
+  "Training Subjects": "Operating Systems + DBMS",
+  "Top1 Accuracy": 0.5161,
+  "Top1 CI Low": 0.3945,
+  "Top1 CI High": 0.6359,
+  "Top3 Accuracy": 0.6935,
+  "Top3 CI Low": 0.5703,
+  "Top3 CI High": 0.7942,
+  "n_test": 62,
+  "training_time_seconds": 13.0
+}

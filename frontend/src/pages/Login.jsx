@@ -74,21 +74,45 @@ export default function Login() {
 
     setLoading(true);
     try {
+      if (mode === 'login' && isSupabaseConfigured && supabase) {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email: email.trim(),
+          password,
+        });
+        if (!error && data?.session) {
+          const uData = {
+            id: data.user.id,
+            email: data.user.email,
+            name: data.user.user_metadata?.full_name || data.user.user_metadata?.name || data.user.email,
+          };
+          await login(data.session.access_token, uData, data.session.refresh_token);
+          navigate('/upload');
+          return;
+        } else if (error && error.message.includes('Invalid login credentials')) {
+          setApiError('Invalid email or password.');
+          return;
+        }
+      }
+
       const endpoint = mode === 'signup' ? '/api/v1/auth/signup' : '/api/v1/auth/login';
       const res = await axios.post(`${API_BASE_URL}${endpoint}`, {
         email: email.trim(),
         password,
       });
 
-      if (res.data) {
-        const token    = res.data.access_token || 'demo_token';
-        const userData = res.data.user || { id: 'user_1', email: email.trim() };
-        login(token, userData);
-        navigate('/query');
+      if (res.data && res.data.access_token) {
+        const token        = res.data.access_token;
+        const refreshToken = res.data.refresh_token;
+        const userData     = res.data.user || { email: email.trim() };
+        await login(token, userData, refreshToken);
+
+        navigate('/upload');
+      } else {
+        setApiError('Authentication failed: No valid access token returned from auth server.');
       }
     } catch (err) {
       console.error('Auth Error:', err);
-      const detail = err.response?.data?.detail;
+      const detail = err.response?.data?.detail || err.message;
       if (typeof detail === 'string') {
         setApiError(detail);
       } else if (Array.isArray(detail) && detail[0]?.msg) {

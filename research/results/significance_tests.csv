@@ -1,0 +1,4 @@
+Comparison,Chi2 Statistic,p-value,Discordant A Correct (b),Discordant B Correct (c),Odds Ratio (OR),Cohen's g,Significant (p < 0.05)
+a) Full CAPT-M+FT+Hybrid vs. SBERT NN (base model),18.6923,1.5360e-05,33,6,5.1538,0.3462,YES
+b) CAPT-M+FT ST vs. CAPT-M+Base ST,22.0,2.7265e-06,22,0,45.0,0.5,YES
+c) Full CAPT-M+FT+Hybrid vs. Strongest New Baseline,20.5122,5.9253e-06,35,6,5.4615,0.3537,YES

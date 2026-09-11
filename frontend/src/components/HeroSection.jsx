@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, CheckCircle2, Zap, Search, ShieldCheck, Play, Terminal } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Search, Play, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HeroSection() {

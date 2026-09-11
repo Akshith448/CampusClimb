@@ -1,0 +1,48 @@
+==========================================================================
+STEP 3 — HYBRID ST + TF-IDF ENSEMBLE  (n=326 gold samples)
+==========================================================================
+
+Configuration                  |  Top-1 Acc |  Top-3 Acc |   ΔTop-1 |   ΔTop-3
+--------------------------------------------------------------------------
+  ST original (CAPT-M)         |     0.5429 |     0.7362 |  +0.0000 |  +0.0000  ← baseline
+  ST no-abstain                |     0.5859 |     0.7362 |  +0.0429 |  +0.0000
+  ST relax-thr=0.30            |     0.5767 |     0.7362 |  +0.0337 |  +0.0000
+  ST relax-thr=0.35            |     0.5706 |     0.7362 |  +0.0276 |  +0.0000
+  Hybrid α=0.3                 |     0.5552 |     0.7331 |  +0.0123 |  -0.0031
+  Hybrid α=0.4                 |     0.5736 |     0.7393 |  +0.0307 |  +0.0031
+  Hybrid α=0.5                 |     0.5859 |     0.7454 |  +0.0429 |  +0.0092
+  Hybrid α=0.6                 |     0.5951 |     0.7393 |  +0.0521 |  +0.0031  ← BEST
+  Hybrid α=0.7                 |     0.5890 |     0.7362 |  +0.0460 |  +0.0000
+  Hybrid α=0.8                 |     0.5951 |     0.7393 |  +0.0521 |  +0.0031
+  Hybrid α=0.9                 |     0.5951 |     0.7301 |  +0.0521 |  -0.0061
+--------------------------------------------------------------------------
+
+Baseline (ST original):  Top-1=0.5429  Top-3=0.7362
+Best config (Hybrid α=0.6):  Top-1=0.5951  Top-3=0.7393
+  Δ Top-1: +0.0521
+  Δ Top-3: +0.0031
+
+MCNEMAR'S TEST: Best config vs ST original
+  Top-1: χ²=7.811  p=0.0052  b=27 c=10  SIGNIFICANT (p<0.05)
+  Top-3: χ²=0.111  p=0.7389  b=5 c=4  NOT significant (p>=0.05)
+
+THRESHOLD RELAXATION ABLATION  (ST boosted score, no TF-IDF)
+  Shows whether lowering the abstain floor alone improves accuracy,
+  independent of the hybrid blending:
+  Config                    |    Top-1 |   ΔTop-1 | Abstentions (None)
+  ------------------------------------------------------------
+  ST original (CAPT-M)      |   0.5429 |  +0.0000 |  68 abstentions (20.9%)
+  ST no-abstain             |   0.5859 |  +0.0429 |   0 abstentions (0.0%)
+  ST relax-thr=0.30         |   0.5767 |  +0.0337 |  21 abstentions (6.4%)
+  ST relax-thr=0.35         |   0.5706 |  +0.0276 |  35 abstentions (10.7%)
+
+HYBRID ENSEMBLE ABLATION  (raw ST sim + TF-IDF, no abstain)
+     Alpha |    Top-1 |   ΔTop-1 |    Top-3 |   ΔTop-3
+  ------------------------------------------------------
+       0.3 |   0.5552 |  +0.0123 |   0.7331 |  -0.0031
+       0.4 |   0.5736 |  +0.0307 |   0.7393 |  +0.0031
+       0.5 |   0.5859 |  +0.0429 |   0.7454 |  +0.0092
+       0.6 |   0.5951 |  +0.0521 |   0.7393 |  +0.0031
+       0.7 |   0.5890 |  +0.0460 |   0.7362 |  +0.0000
+       0.8 |   0.5951 |  +0.0521 |   0.7393 |  +0.0031
+       0.9 |   0.5951 |  +0.0521 |   0.7301 |  -0.0061

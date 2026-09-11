@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, ShieldCheck } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {

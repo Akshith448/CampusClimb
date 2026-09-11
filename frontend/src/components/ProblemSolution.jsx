@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Layers, BarChart3, Languages, Sparkles, Terminal } from 'lucide-react';
+import { Layers, BarChart3, Languages, Sparkles } from 'lucide-react';
 
 export default function ProblemSolution() {
   const features = [

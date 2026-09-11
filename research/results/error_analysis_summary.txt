@@ -1,0 +1,84 @@
+STEP 2 — ST Top-1 Error Analysis
+Gold set: 326 samples
+Top-1 correct: 177  (54.3%)
+Top-1 misses:  149  (45.7%)
+
+FAILURE CATEGORY BREAKDOWN
+Category                        Count    %Miss
+----------------------------------------------
+  ABSTAINED                        68    45.6%
+  AMBIGUOUS_CHUNK                  37    24.8%
+  NEAR_MISS_TOP3                   13     8.7%
+  CROSS_TOPIC_CONFUSION            19    12.8%
+  TOPIC_GRANULARITY                12     8.1%
+  CROSS_SUBJECT_CONFUSION           0     0.0%
+  OTHER                             0     0.0%
+
+TOP 3 CATEGORIES — EXAMPLES (3 per category)
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+  CATEGORY: ABSTAINED  (n=68)
+──────────────────────────────────────────────────────────────────────
+
+  [1] Subject: Operating Systems
+      Chunk text (10 words): What is the structure and role of a page table?...
+      Correct topic : Virtual Address Space
+      Predicted top1: (abstained)  (score=0.3512)
+      In Top-3?     : NO
+
+  [2] Subject: Operating Systems
+      Chunk text (12 words): Define the syntax of read() system call. PART – B (50 Marks)...
+      Correct topic : System Calls for File I/O Operations
+      Predicted top1: (abstained)  (score=0.3695)
+      In Top-3?     : NO
+
+  [3] Subject: Operating Systems
+      Chunk text (20 words): Describe the Shortest Job First (SJF) scheduling algorithm. How does preemptive SJF (Shortest Remaining Time First) differ from non-preempti...
+      Correct topic : Scheduling Algorithms
+      Predicted top1: (abstained)  (score=0.3727)
+      In Top-3?     : YES
+
+──────────────────────────────────────────────────────────────────────
+  CATEGORY: AMBIGUOUS_CHUNK  (n=37)
+──────────────────────────────────────────────────────────────────────
+
+  [1] Subject: Operating Systems
+      Chunk text (8 words): What are system calls in an operating system?...
+      Correct topic : Operating System Services
+      Predicted top1: Operating System Introduction  (score=0.6228)
+      In Top-3?     : YES
+
+  [2] Subject: Operating Systems
+      Chunk text (11 words): What are the main criteria used to evaluate CPU scheduling algorithms?...
+      Correct topic : Scheduling Algorithms
+      Predicted top1: Scheduling Criteria  (score=0.6665)
+      In Top-3?     : YES
+
+  [3] Subject: Operating Systems
+      Chunk text (5 words): What is Interprocess Communication (IPC)?...
+      Correct topic : Cooperating Processes
+      Predicted top1: IPC Between Processes on a Single System  (score=0.6253)
+      In Top-3?     : NO
+
+──────────────────────────────────────────────────────────────────────
+  CATEGORY: CROSS_TOPIC_CONFUSION  (n=19)
+──────────────────────────────────────────────────────────────────────
+
+  [1] Subject: Operating Systems
+      Chunk text (15 words): Write down the services provided by an operating systems with respect to device management. [5+5]...
+      Correct topic : System Calls for File I/O Operations
+      Predicted top1: Operating System Services  (score=0.7391)
+      In Top-3?     : NO
+
+  [2] Subject: Operating Systems
+      Chunk text (21 words): Can a multithreaded solution using multiple user-level threads achieve better performance on a multiprocessor system than on a single-proces...
+      Correct topic : Parallel Systems
+      Predicted top1: Threads  (score=0.6498)
+      In Top-3?     : NO
+
+  [3] Subject: Operating Systems
+      Chunk text (27 words): Explain the concept of Least Recently Used memory page replacement method and how it is different from sFirst In First Out (FIFO) page repla...
+      Correct topic : Virtual Address Space
+      Predicted top1: Memory Management Unit (MMU)  (score=0.4295)
+      In Top-3?     : NO

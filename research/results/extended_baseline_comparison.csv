@@ -1,0 +1,3 @@
+Method,Top1 Accuracy,Top1 CI Low,Top1 CI High,Top3 Accuracy,Top3 CI Low,Top3 CI High,Precision,Recall,F1,Correct Top1,Correct Top3,n_evaluated
+TF-IDF + Logistic Regression,0.2227,0.1736,0.2809,0.3755,0.3154,0.4398,0.1442,0.1544,0.1361,51,86,229
+MiniLM Cosine NN,0.5197,0.4552,0.5835,0.7205,0.6591,0.7746,0.4645,0.4416,0.4214,119,165,229

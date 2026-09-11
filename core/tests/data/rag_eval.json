@@ -1,0 +1,326 @@
+[
+  {
+    "id": "ans_01",
+    "query": "What is a process in an operating system?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Process States and Lifecycle",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ans_02",
+    "query": "Explain deadlock and the four necessary conditions for deadlock.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Deadlock Detection and Prevention",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_03",
+    "query": "What is paging and how does page table address translation work?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Paging and Virtual Memory",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_04",
+    "query": "Differentiate between preemptive and non-preemptive CPU scheduling.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "CPU Scheduling Algorithms",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_05",
+    "query": "Explain the Round Robin CPU scheduling algorithm with time quantum.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "CPU Scheduling Algorithms",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ans_06",
+    "query": "What is a semaphore and what is the difference between counting and binary semaphores?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Process Synchronization and Semaphores",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_07",
+    "query": "What is fragmentation? Explain internal versus external fragmentation.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Memory Management Strategies",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_08",
+    "query": "Describe page replacement algorithms like FIFO, LRU, and Optimal.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Paging and Virtual Memory",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_09",
+    "query": "What is thrashing in virtual memory and how does the working set model prevent it?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Paging and Virtual Memory",
+    "language": "English",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ans_10",
+    "query": "Explain disk scheduling algorithms such as FCFS, SSTF, SCAN, and C-SCAN.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "File Systems and Storage",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_11",
+    "query": "What is the critical section problem and what requirements must a solution satisfy?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Process Synchronization and Semaphores",
+    "language": "English",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ans_12",
+    "query": "Explain the Bankers Algorithm for deadlock avoidance.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Deadlock Detection and Prevention",
+    "language": "English",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ans_13",
+    "query": "What is a context switch and what overhead does it introduce?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Process States and Lifecycle",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ans_14",
+    "query": "What is an inode in Unix file systems?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "File Systems and Storage",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_15",
+    "query": "What is Demand Paging and what are page faults?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Paging and Virtual Memory",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_16",
+    "query": "What are system calls and how does user mode transition to kernel mode?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "OS Structure and System Calls",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_17",
+    "query": "Differentiate between monolithic kernel and microkernel architecture.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "OS Structure and System Calls",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_18",
+    "query": "What is inter-process communication (IPC) and what are shared memory vs message passing?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Process States and Lifecycle",
+    "language": "English",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ans_19",
+    "query": "What is Translation Lookaside Buffer (TLB) and how does it speed up paging?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Paging and Virtual Memory",
+    "language": "English",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ans_20",
+    "query": "What is Belady's Anomaly in FIFO page replacement?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "expected_topic": "Paging and Virtual Memory",
+    "language": "English",
+    "difficulty": "hard"
+  },
+  {
+    "id": "unans_01",
+    "query": "Explain quantum computing basics and qubit superposition.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_02",
+    "query": "How to make homemade Italian pasta dough from scratch?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_03",
+    "query": "Explain the second law of thermodynamics and Carnot efficiency.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_04",
+    "query": "What is CRISPR Cas9 gene editing and how does guide RNA work?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_05",
+    "query": "Explain Black-Scholes formula for financial option pricing.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_06",
+    "query": "What are photosynthesis light-dependent reactions in plant biology?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_07",
+    "query": "How do rocket propulsion engines operate in space vacuum?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_08",
+    "query": "Explain general relativity spacetime curvature and Einstein field equations.",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_09",
+    "query": "What was the French Revolution of 1789 causes and outcome?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "unans_10",
+    "query": "How does photosynthesis produce glucose in chloroplasts?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_NOT_FOUND",
+    "language": "English",
+    "difficulty": "easy"
+  },
+  {
+    "id": "multi_01",
+    "query": "CPU scheduling kya hai aur iske main algorithms kaunse hain?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "Hinglish",
+    "difficulty": "easy"
+  },
+  {
+    "id": "multi_02",
+    "query": "Deadlock ke char zaroori conditions kya hain?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "Hinglish",
+    "difficulty": "medium"
+  },
+  {
+    "id": "multi_03",
+    "query": "Paging aur segmentation mein kya antar hai?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "Hinglish",
+    "difficulty": "medium"
+  },
+  {
+    "id": "multi_04",
+    "query": "Operating system mein process synchronization kaise kaam karta hai?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "Hinglish",
+    "difficulty": "medium"
+  },
+  {
+    "id": "multi_05",
+    "query": "ऑपरेटिंग सिस्टम में डेडलॉक क्या होता है?",
+    "subject": "Operating Systems",
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "Hindi",
+    "difficulty": "easy"
+  },
+  {
+    "id": "conv_01",
+    "query": "What are its main advantages?",
+    "subject": "Operating Systems",
+    "chat_history": [
+      {"role": "user", "content": "What is CPU scheduling in operating system?"},
+      {"role": "assistant", "content": "CPU scheduling is the process of selecting which ready process executes on the CPU."}
+    ],
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "English",
+    "difficulty": "hard"
+  },
+  {
+    "id": "conv_02",
+    "query": "How does it avoid starvation?",
+    "subject": "Operating Systems",
+    "chat_history": [
+      {"role": "user", "content": "Explain Priority Scheduling algorithm in OS."},
+      {"role": "assistant", "content": "Priority scheduling selects the process with highest priority."}
+    ],
+    "expected_mode": "NOTES_SUPPORTED",
+    "language": "English",
+    "difficulty": "hard"
+  }
+]

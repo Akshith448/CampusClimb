@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Mountain, ArrowRight, Sun, Moon, Menu, X, Terminal } from 'lucide-react';
+import { ArrowRight, Sun, Moon, Menu, X, Terminal } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -42,6 +42,9 @@ export default function Navbar({ theme, toggleTheme }) {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-xs font-mono tracking-wide text-neutral-400 dark:text-neutral-400 light:text-neutral-600">
+          <Link to="/dashboard" className="hover:text-teal-400 transition-colors duration-200 text-teal-300 font-semibold">
+            [Dashboard]
+          </Link>
           <a href="#features" className="hover:text-teal-400 transition-colors duration-200">
             [Features]
           </a>
@@ -142,12 +145,14 @@ export default function Navbar({ theme, toggleTheme }) {
             <div className="pt-4 border-t border-neutral-800 flex flex-col gap-3">
               <Link
                 to="/login"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-lg border border-neutral-800 text-neutral-200 font-medium"
               >
                 Sign In
               </Link>
               <Link
                 to="/login"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-lg bg-teal-600 text-white font-semibold"
               >
                 Launch Engine

@@ -1,0 +1,5 @@
+Comparison,Mean Accuracy Difference,95% CI Lower Bound,95% CI Upper Bound
+FT Hybrid vs Base SBERT NN,0.1194,0.0655,0.1747
+FT Hybrid vs MiniLM NN,0.127,0.0741,0.1834
+FT Hybrid vs TF-IDF alone,0.1438,0.0917,0.1965
+FT Hybrid vs TF-IDF + Logistic Regression,0.4221,0.3493,0.4978

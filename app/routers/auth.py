@@ -2,36 +2,44 @@
 Authentication Router — Managed Supabase Auth REST Endpoints (/api/v1/auth/).
 
 Provides signup, login, and current user profile endpoints using Supabase Auth.
+Protected by rate limiting (max 5 requests per 60 seconds per IP to prevent brute-force).
 """
 
-from typing import Dict, Any
+from typing import Any, Dict
 
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, Request, status
 
 from app.auth import get_current_user, supabase_login, supabase_signup
+from app.rate_limiter import auth_rate_limiter
 from app.schemas import AuthTokenResponse, LoginRequest, SignUpRequest, UserResponse
 
 router = APIRouter(prefix="/api/v1/auth", tags=["Authentication"])
 
 
 @router.post("/signup", response_model=AuthTokenResponse, status_code=status.HTTP_201_CREATED)
-async def signup(body: SignUpRequest):
+async def signup(request: Request, body: SignUpRequest):
     """Register a new user account via Supabase Auth."""
-    result = supabase_signup(body.email, body.password)
+    auth_rate_limiter.check(request)
+    result = await supabase_signup(body.email, body.password)
     return AuthTokenResponse(
         access_token=result["access_token"],
         token_type="bearer",
+        refresh_token=result.get("refresh_token"),
+        expires_in=result.get("expires_in"),
         user=UserResponse(**result["user"]),
     )
 
 
 @router.post("/login", response_model=AuthTokenResponse)
-async def login(body: LoginRequest):
+async def login(request: Request, body: LoginRequest):
     """Authenticate an existing user account via Supabase Auth."""
-    result = supabase_login(body.email, body.password)
+    auth_rate_limiter.check(request)
+    result = await supabase_login(body.email, body.password)
     return AuthTokenResponse(
         access_token=result["access_token"],
         token_type="bearer",
+        refresh_token=result.get("refresh_token"),
+        expires_in=result.get("expires_in"),
         user=UserResponse(**result["user"]),
     )
 

@@ -1,0 +1,22 @@
+DEDUPLICATION MANUAL EVALUATION DETAILS
+=======================================
+
+FULL 90-PAIR SET:
+  TP=18, FP=3, FN=25, TN=44
+  Precision: 0.8571
+  Recall:    0.4186
+  F1 Score:  0.5625 (95% Wilson CI: [0.4595, 0.6603])
+
+HARD-CASE 60-PAIR SUBSET:
+  TP=3, FP=3, FN=24, TN=30
+  Precision: 0.5000
+  Recall:    0.1111
+  F1 Score:  0.1818 (95% Wilson CI: [0.1044, 0.2975])
+
+McNEMAR SIGNIFICANCE TESTS (Full 90-pair set):
+  ST vs TF-IDF Baseline (at 0.85): chi2=1.0000, p=3.1731e-01
+  ST vs Jaccard Baseline (at 0.85): chi2=2.2727, p=1.3167e-01
+
+McNEMAR SIGNIFICANCE TESTS (Hard 60-pair subset):
+  ST vs TF-IDF Baseline (at 0.85): chi2=0.0000, p=1.0000e+00
+  ST vs Jaccard Baseline (at 0.85): chi2=0.0000, p=1.0000e+00

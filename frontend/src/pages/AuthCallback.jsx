@@ -53,9 +53,12 @@ export default function AuthCallback() {
   const [displayName, setDisplayName] = useState('');
   const [showToast, setShowToast] = useState(false);
 
+  const navigateBasedOnStatus = () => {
+    navigate('/upload', { replace: true });
+  };
+
   useEffect(() => {
     if (!isSupabaseConfigured || !supabase) {
-      // Supabase not configured — shouldn't reach here normally
       navigate('/login', { replace: true });
       return;
     }
@@ -64,28 +67,63 @@ export default function AuthCallback() {
 
     const run = async () => {
       try {
-        // getSession() exchanges the PKCE/implicit token from the URL hash automatically
-        const { data: { session }, error } = await supabase.auth.getSession();
+        let session = null;
+        let user = null;
+        let accessToken = null;
+
+        const { data } = await supabase.auth.getSession();
+        if (data?.session) {
+          session = data.session;
+          user = session.user;
+          accessToken = session.access_token;
+        }
+
+        // Fallback: Parse URL hash directly if getSession() hasn't processed hash yet
+        if (!accessToken && window.location.hash) {
+          const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+          const hashToken = hashParams.get('access_token');
+          if (hashToken) {
+            accessToken = hashToken;
+            try {
+              const { data: setSessionData } = await supabase.auth.setSession({
+                access_token: hashToken,
+                refresh_token: hashParams.get('refresh_token') || '',
+              });
+              if (setSessionData?.session) {
+                session = setSessionData.session;
+                user = session.user;
+              }
+            } catch (e) {
+              console.warn('[AuthCallback] setSession failed:', e);
+            }
+
+            if (!user) {
+              try {
+                const { data: userData } = await supabase.auth.getUser(hashToken);
+                user = userData?.user;
+              } catch (e) {
+                console.warn('[AuthCallback] getUser failed:', e);
+              }
+            }
+          }
+        }
 
         if (cancelled) return;
 
-        if (error || !session) {
-          console.error('[AuthCallback] Session exchange failed.');
+        if (!accessToken) {
+          console.error('[AuthCallback] Session exchange failed: no token available.');
           setStatus('error');
           setTimeout(() => navigate('/login', { replace: true }), 2000);
           return;
         }
 
-        const { user, access_token } = session;
+        const userData = {
+          id:    user?.id || '',
+          email: user?.email || '',
+          name:  user?.user_metadata?.full_name || user?.user_metadata?.name || user?.email || 'User',
+        };
 
-        // Feed the Supabase JWT into AuthContext so the rest of the app
-        // (including the backend, which validates via SUPABASE_JWT_SECRET) treats
-        // this user as authenticated identically to email/password users.
-        login(access_token, {
-          id:    user.id,
-          email: user.email,
-          name:  user.user_metadata?.full_name || user.user_metadata?.name || user.email,
-        });
+        login(accessToken, userData);
 
         const firstTime = isNewUser(user);
         const name      = getDisplayName(user);
@@ -95,17 +133,14 @@ export default function AuthCallback() {
         if (firstTime) {
           setStatus('new');
           setShowToast(true);
-          // Toast auto-dismisses after 3.2 s (WelcomeToast handles this)
-          // onDone callback does the navigation
         } else {
           setStatus('returning');
-          // Small visual delay so the status message is visible, then navigate
           setTimeout(() => {
-            if (!cancelled) navigate('/query', { replace: true });
+            if (!cancelled) navigateBasedOnStatus();
           }, 600);
         }
       } catch (err) {
-        console.error('[AuthCallback] Unexpected error during OAuth callback handling.');
+        console.error('[AuthCallback] Unexpected error during OAuth callback handling:', err);
         if (!cancelled) {
           setStatus('error');
           setTimeout(() => navigate('/login', { replace: true }), 2000);
@@ -118,7 +153,7 @@ export default function AuthCallback() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleToastDone = () => {
-    navigate('/query', { replace: true });
+    navigateBasedOnStatus();
   };
 
   return (
